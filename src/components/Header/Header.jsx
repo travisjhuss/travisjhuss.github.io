@@ -3,6 +3,6 @@
 
 export default function Header() {
     return (
-        <h1>HEADER</h1>
+        <h1>About Skills Work Contact</h1>
     )
 };
