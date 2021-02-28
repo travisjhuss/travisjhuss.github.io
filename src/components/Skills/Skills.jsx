@@ -3,7 +3,7 @@
 export default function Skills() {
     return (
         <div className="container">
-            <center>
+            <center className="content">
                 <p className="subtitle">Skills</p>
                 <p className="body-text">
                     JavaScript | CSS | React | Redux | Express |  Node |
