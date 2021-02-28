@@ -6,7 +6,7 @@ export default function Top() {
         <center className="top">
             <div className="title">
                 <div className="name">TRAVIS J HUSS</div>
-                <div className="subtitle">Full Stack Software Engineer</div>
+                <div className="job-title">Full Stack Software Engineer</div>
             </div>
         </center>
     )

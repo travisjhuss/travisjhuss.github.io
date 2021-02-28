@@ -4,3 +4,22 @@
     background: rgb(230,230,230);
     background: linear-gradient(90deg, rgba(230,230,230,1) 0%, rgba(216,216,216,1) 9%, rgba(205,205,205,1) 18%, rgba(221,221,221,1) 36%, rgba(217,217,217,1) 60%, rgba(205,205,205,1) 85%, rgba(228,228,228,1) 100%);
 }
+
+.container {
+    padding: 50px 30px;
+}
+
+.body-text {
+    color: #0d0d0d;
+    font-family: 'Josefin Sans';
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.subtitle {
+    color: #0d0d0d;
+    font-family: 'Josefin Sans';
+    font-size: 50px;
+    font-weight: 200;
+    text-align: center;
+}
