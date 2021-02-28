@@ -1,8 +1,10 @@
 [ ] - favicon
 [ ] - installs
-    [ ] - react router dom
+    [x] - react router dom
     [ ] - material ui
 [ ] - find font(s)
+        - Josefin Sans
+        - Encode Sans
 
 
 SECTIONS
@@ -10,3 +12,6 @@ SECTIONS
 [ ] - Work
 [ ] - skills
 [ ] - Contact
+
+
+**'npm run deploy' after each push to update the site**
