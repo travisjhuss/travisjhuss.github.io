@@ -1,4 +1,3 @@
-import { useRef } from 'react';
 import Header from '../Header/Header';
 import Top from '../Top/Top';
 import About from '../About/About';
@@ -7,27 +6,26 @@ import Work from '../Work/Work';
 import Contact from '../Contact/Contact';
 import './App.css';
 
-import Fade from 'react-reveal/Fade';
+// import ScrollAnimation from 'react-animate-on-scroll';
+import { useEffect } from 'react';
 
 function App() {
 
-  const titleRef = useRef();
+
 
   return (
     <div className="App">
-        <Header />
+      <Header />
 
-        <Top />
+      <Top />
 
-        <Fade bottom duration={800} opposite>
-          <About id={'about'}/>
-        </Fade>
+      <About />
 
-        <Skills />
+      <Skills />
 
-        <Work />
+      <Work />
 
-        <Contact />
+      <Contact />
     </div>
   );
 }

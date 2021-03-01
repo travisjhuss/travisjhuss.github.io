@@ -1,13 +1,19 @@
+import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Grid from '@material-ui/core/Grid';
 import './About.css';
 
 export default function About() {
+
     return (
-        <div className="container" id="about">
-            <div className="content">
+        <div
+            className="container"
+            id="about"
+        >
+            <div className="content" >
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
-                        <img className="profile-img" src="./BandWprofile.jpeg" alt="profile"/>
+                        <img className="profile-img" src="./BandWprofile.jpeg" alt="profile" />
                     </Grid>
                     <Grid item xs={4}>
                         <p className="subtitle">About</p>
