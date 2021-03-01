@@ -2,7 +2,7 @@
 
 export default function Skills() {
     return (
-        <div className="container">
+        <div className="container" id="skills">
             <center className="content">
                 <p className="subtitle">Skills</p>
                 <p className="body-text">

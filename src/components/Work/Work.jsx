@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid';
 
 export default function Work() {
     return (
-        <div className="container">
+        <div className="container" id="work">
             <Grid container spacing={2}>
                 <Grid item xs={6}>
                     <p className="body-text"> 

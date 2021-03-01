@@ -2,7 +2,7 @@ import Grid from '@material-ui/core/Grid';
 
 export default function Contact() {
     return (
-        <div className="container">
+        <div className="container" id="contact">
             <div className="content">
                 <Grid container spacing={2}>
                     <Grid item xs={12}>

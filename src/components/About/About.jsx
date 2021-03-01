@@ -3,7 +3,7 @@ import './About.css';
 
 export default function About() {
     return (
-        <div className="container">
+        <div className="container" id="about">
             <div className="content">
                 <Grid container spacing={2}>
                     <Grid item xs={12}>
