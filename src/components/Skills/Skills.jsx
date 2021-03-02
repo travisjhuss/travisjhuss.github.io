@@ -2,7 +2,7 @@
 
 export default function Skills() {
     return (
-        <div className="container" id="skills" data-aos="fade-left">
+        <div className="container" id="skills" >
             <center className="content">
                 <p className="subtitle">Skills</p>
                 <p className="body-text" style={{textAlign: 'center'}}>

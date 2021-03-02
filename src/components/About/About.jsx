@@ -3,12 +3,13 @@ import { motion } from 'framer-motion';
 import Grid from '@material-ui/core/Grid';
 import './About.css';
 
-export default function About() {
+export default function About({sectionRef}) {
 
     return (
         <div
-            className="container"
+            className="container fadeIn"
             id="about"
+            ref={sectionRef}
         >
             <div className="content" >
                 <Grid container spacing={2}>
