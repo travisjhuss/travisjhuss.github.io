@@ -6,8 +6,7 @@ import Work from '../Work/Work';
 import Contact from '../Contact/Contact';
 import './App.css';
 
-// import ScrollAnimation from 'react-animate-on-scroll';
-import { useEffect } from 'react';
+
 
 function App() {
 
@@ -20,8 +19,6 @@ function App() {
       <Top />
 
       <About />
-
-      <Skills />
 
       <Work />
 

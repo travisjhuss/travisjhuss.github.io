@@ -21,17 +21,6 @@ export default function Header() {
             <Link
                 className="link"
                 activeClass="active"
-                to="skills"
-                spy={true}
-                smooth={true}
-                // offset={}
-                duration={500}
-            >
-                Skills
-            </Link>
-            <Link
-                className="link"
-                activeClass="active"
                 to="work"
                 spy={true}
                 smooth={true}
