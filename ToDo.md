@@ -2,16 +2,21 @@
 [ ] - installs
     [x] - react router dom
     [ ] - material ui
-[ ] - find font(s)
+[x] - find font(s)
         - Josefin Sans
-        - Encode Sans
+        
 
-
-SECTIONS
-[ ] - About
-[ ] - Work
-[ ] - skills
-[ ] - Contact
+- move everything into app.jsx
+- install framer motion
+- have name & title appear on scroll down
+- have scroll note disappear at last component
+- take screenshots of 
+    - tCc
+    - todo
+    - calculator
+    - group projekt
+- turn all photos to b&W
+- email button, email form open
 
 
 **'npm run deploy' after each push to update the site**

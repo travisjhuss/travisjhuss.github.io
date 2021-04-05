@@ -1,42 +1,142 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
 .App {
-    background-color: #F5E0C8;
+  background-color: #ecd2b3;
+}
+
+.link {
+  color: #fff;
+  font-family: 'Josefin Sans';
+  font-size: 28px;
+  font-weight: 400;
+  display: inline;
+  padding-right: 10px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  text-decoration-color: #33312f;
+  cursor: default;
+}
+
+.header {
+  width: 100%;
+  text-align: right;
+  padding-top: 10px;
+  margin-right: 20px;
+  position: fixed;
+  top: 0%;
+  background-color: #ecd2b3;
+  z-index: 12;
 }
 
 .container {
-    padding: 50px 30px;
-    height: 100vh;
-    /* width: 100%; */
-    position: relative;
+  padding: 50px 10%;
+  height: 100vh;
+  /* width: 100%; */
+  position: relative;
 }
 
 .body-text {
-    color: #0d0d0d;
-    font-family: 'Josefin Sans';
-    font-size: 20px;
-    font-weight: 300;
-    text-align: left;
+  color: #0d0d0d;
+  font-family: 'Josefin Sans';
+  font-size: 20px;
+  font-weight: 300;
+  text-align: left;
+  z-index: 9;
+  position: relative;
 }
 
 .subtitle {
-    color: #0d0d0d;
-    font-family: 'Josefin Sans';
-    font-size: 50px;
-    font-weight: 200;
-    text-align: center;
+  color: #fff;
+  font-family: 'Josefin Sans';
+  font-size: 50px;
+  font-weight: 400;
+  text-align: center;
+  text-decoration: underline;
+  text-decoration-color: #33312f;
+  text-decoration-thickness: 2px;
+  z-index: 9;
+  position: relative;
 }
 
 .content {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    position: relative;
-    top: 20%;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 0%;
 }
 
 .profile-img {
-    border-radius: 100%;
-    width: 350px;
-    margin-bottom: 20px;
+  border-radius: 100%;
+  width: 450px;
+  opacity: 70%;
+}
+
+.scroll-note {
+  position: fixed;
+  top: 80%;
+  left: 40px;
+  z-index: 10;
+}
+
+.scroll-word {
+  margin: 0;
+  padding: 0;
+  color: #fff;
+  font-family: 'Josefin Sans';
+}
+
+.scroll-text {
+  top: 79%;
+  left: 75px;
+  position: fixed;
+}
+
+.top {
+  width: 100%;
+  margin-top: 37px;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: repeat(20, 5%);
+  grid-template-rows: repeat(20, 5%);
+}
+
+.title {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  top: 40%;
+  white-space: pre-wrap;
+}
+
+.name {
+  color: #33312F;
+  font-family: 'Josefin Sans';
+  font-size: 60px;
+  font-weight: 300;
+  letter-spacing: 5px;
+  padding-bottom: 20px;
+  grid-row: 3;
+  grid-column: 4 / 14;
+  z-index: 10;
+}
+
+.job-title {
+  color: #fff;
+  font-family: 'Josefin Sans';
+  font-size: 36px;
+  font-weight: 400;
+  grid-column: 10 / 21;
+  grid-row: 17;
+  z-index: 10;
+  margin-left: 12px;
+}
+
+.cover-photo {
+  grid-column: 1 / 21;
+  justify-self: center;
+  opacity: 70%;
 }
