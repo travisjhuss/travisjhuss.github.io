@@ -1,9 +1,27 @@
 import { Link, animateScroll as scroll } from 'react-scroll';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import Grid from '@material-ui/core/Grid';
+import { makeStyles } from '@material-ui/core/styles';
+import GridList from '@material-ui/core/GridList';
+import GridListTile from '@material-ui/core/GridListTile';
 import './App.css';
 
+const useStyles = makeStyles((theme) => ({
+  root: {
+    display: 'flex',
+    flexWrap: 'wrap',
+    justifyContent: 'space-around',
+    overflow: 'hidden',
+    backgroundColor: theme.palette.background.paper,
+  },
+  gridList: {
+    width: 500,
+    height: 450,
+  },
+}));
+
 function App() {
+  const classes = useStyles();
   const openLinkedIn = () => {
     const newWindow = window.open(
       'https://www.linkedin.com/in/travisjhuss/',
@@ -74,14 +92,8 @@ function App() {
           <p className="scroll-word">More</p>
         </div>
       </div>
-      
+
       <div className="top">
-        {/* <img
-          src=""
-          width="530"
-          alt="mill city museum photo in black and white"
-          class="cover-photo"
-        /> */}
         <img
           src="./mill-city-museum.png"
           width="530"
@@ -132,7 +144,7 @@ function App() {
 
       <div className="container" id="work" data-aos="fade-up">
         <div className="content">
-          <Grid container spacing={2}>
+          <Grid container spacing={3}>
             <Grid item xs={6}>
               <p className="body-text">
                 This is my work ndjdsnfjksdncskdncks jsdncjksdncs
@@ -140,11 +152,47 @@ function App() {
                 fsdifh sifhs dif hsdfsf sid hfp
               </p>
             </Grid>
-            <Grid item xs={2}>
-              <p className="subtitle"> | </p>
-            </Grid>
-            <Grid item xs={4}>
+            <Grid item xs={6}>
               <p className="subtitle"> Work </p>
+              <center>
+              <GridList cellHeight={75} className={classes.gridList} cols={6} rows={6}>
+                <GridListTile key="1" cols={4} rows={2}>
+                  <img
+                    src="./explore-view.png"
+                    alt="screen cap from bekome app"
+                    // className="screen-bekome"
+                  />
+                </GridListTile>
+                <GridListTile key="2" cols={2} rows={2}>
+                  <img
+                    src="./movie-screen-2.png"
+                    alt="screen cap from movie database app"
+                    // className="screen-movie"
+                  />
+                </GridListTile>
+                <GridListTile key="3" cols={6} rows={2}>
+                  <img
+                    src="./chef-screen.png"
+                    alt="screen cap from condescending chef app"
+                    // className="screen-chef"
+                  />
+                </GridListTile>
+                <GridListTile key="4" cols={2} rows={2}>
+                  <img
+                    src="./gallery-screen.png"
+                    alt="screen cap from photo gallery app"
+                    // className="screen-gallery"
+                  />
+                </GridListTile>
+                <GridListTile key="5" cols={4} rows={2}>
+                  <img
+                    src="./to-do-screen.png"
+                    alt="screen cap from to do list app"
+                    // className="screen-todo"
+                  />
+                </GridListTile>
+              </GridList>
+              </center>
             </Grid>
           </Grid>
         </div>
