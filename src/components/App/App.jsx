@@ -123,14 +123,14 @@ function App() {
             <Grid item xs={3}>
               <img
                 className="profile-img"
-                src="./BandWprofile.jpeg"
+                src="./Profile-pic-close.png"
                 alt="profile"
               />
             </Grid>
             <Grid item xs={4}>
               <p className="subtitle">About</p>
             </Grid>
-            <Grid item xs={5} style={{ marginTop: '50px' }}>
+            <Grid item xs={5} style={{ marginTop: '150px' }}>
               <p className="body-text">
                 Accomplished leader in the hospitality industry now bringing the
                 skills cultivated over the past 15 years to a career in software
@@ -141,7 +141,7 @@ function App() {
               </p>
             </Grid>
             <Grid item xs={12}>
-              <p className="subtitle" style={{ marginTop: '0px' }}>
+              <p className="subtitle" style={{ marginTop: '-20px', marginBottom: '0px' }}>
                 Skills
               </p>
               <p className="body-text" style={{ textAlign: 'center' }}>
@@ -183,7 +183,7 @@ function App() {
                     onMouseLeave={() => onHover(0)}
                   >
                     <img
-                      src="./explore-view.png"
+                      src="./explore-view2.png"
                       alt="screen cap from bekome app"
                       className="work-img"
                     />
@@ -209,7 +209,7 @@ function App() {
                     onMouseLeave={() => onHover(0)}
                   >
                     <img
-                      src="./chef-screen.png"
+                      src="./chef-screen2.png"
                       alt="screen cap from condescending chef app"
                       className="work-img"
                     />
