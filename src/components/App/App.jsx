@@ -1,9 +1,16 @@
+import { useState } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
+import Bekome from '../Work/Bekome';
+import Chef from '../Work/Chef';
+import Todo from '../Work/Todo';
+import Gallery from '../Work/Gallery';
+import Movie from '../Work/Movie';
+import Details from '../Work/Details';
 import './App.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -22,6 +29,12 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
+  const [hover, setHover] = useState(0);
+
+  const onHover = (key) => {
+    setHover(key);
+  };
+
   const openLinkedIn = () => {
     const newWindow = window.open(
       'https://www.linkedin.com/in/travisjhuss/',
@@ -97,7 +110,7 @@ function App() {
         <img
           src="./mill-city-museum.png"
           width="530"
-          alt="mill city museum photo in black and white"
+          alt="mill city museum in black and white"
           class="cover-photo"
         />
         <div className="name">TRAVIS J HUSS</div>
@@ -144,54 +157,90 @@ function App() {
 
       <div className="container" id="work" data-aos="fade-up">
         <div className="content">
-          <Grid container spacing={3}>
+          <Grid container spacing={4}>
             <Grid item xs={6}>
-              <p className="body-text">
-                This is my work ndjdsnfjksdncskdncks jsdncjksdncs
-                jdnckjsndcksdnc dncjsdc cdsh fdjc ohf sdfh sdfh sdifh ldfhs
-                fsdifh sifhs dif hsdfsf sid hfp
-              </p>
+              {hover === 0 && <Details />}
+              {hover === 1 && <Bekome />}
+              {hover === 2 && <Movie />}
+              {hover === 3 && <Chef />}
+              {hover === 4 && <Gallery />}
+              {hover === 5 && <Todo />}
             </Grid>
             <Grid item xs={6}>
               <p className="subtitle"> Work </p>
               <center>
-              <GridList cellHeight={75} className={classes.gridList} cols={6} rows={6}>
-                <GridListTile key="1" cols={4} rows={2}>
-                  <img
-                    src="./explore-view.png"
-                    alt="screen cap from bekome app"
-                    // className="screen-bekome"
-                  />
-                </GridListTile>
-                <GridListTile key="2" cols={2} rows={2}>
-                  <img
-                    src="./movie-screen-2.png"
-                    alt="screen cap from movie database app"
-                    // className="screen-movie"
-                  />
-                </GridListTile>
-                <GridListTile key="3" cols={6} rows={2}>
-                  <img
-                    src="./chef-screen.png"
-                    alt="screen cap from condescending chef app"
-                    // className="screen-chef"
-                  />
-                </GridListTile>
-                <GridListTile key="4" cols={2} rows={2}>
-                  <img
-                    src="./gallery-screen.png"
-                    alt="screen cap from photo gallery app"
-                    // className="screen-gallery"
-                  />
-                </GridListTile>
-                <GridListTile key="5" cols={4} rows={2}>
-                  <img
-                    src="./to-do-screen.png"
-                    alt="screen cap from to do list app"
-                    // className="screen-todo"
-                  />
-                </GridListTile>
-              </GridList>
+                <GridList
+                  cellHeight={75}
+                  className={classes.gridList}
+                  cols={6}
+                  rows={6}
+                >
+                  <GridListTile
+                    key="1"
+                    cols={4}
+                    rows={2}
+                    onMouseEnter={() => onHover(1)}
+                    onMouseLeave={() => onHover(0)}
+                  >
+                    <img
+                      src="./explore-view.png"
+                      alt="screen cap from bekome app"
+                      className="work-img"
+                    />
+                  </GridListTile>
+                  <GridListTile
+                    key="2"
+                    cols={2}
+                    rows={2}
+                    onMouseEnter={() => onHover(2)}
+                    onMouseLeave={() => onHover(0)}
+                  >
+                    <img
+                      src="./movie-screen-2.png"
+                      alt="screen cap from movie database app"
+                      className="work-img"
+                    />
+                  </GridListTile>
+                  <GridListTile
+                    key="3"
+                    cols={6}
+                    rows={2}
+                    onMouseEnter={() => onHover(3)}
+                    onMouseLeave={() => onHover(0)}
+                  >
+                    <img
+                      src="./chef-screen.png"
+                      alt="screen cap from condescending chef app"
+                      className="work-img"
+                    />
+                  </GridListTile>
+                  <GridListTile
+                    key="4"
+                    cols={2}
+                    rows={2}
+                    onMouseEnter={() => onHover(4)}
+                    onMouseLeave={() => onHover(0)}
+                  >
+                    <img
+                      src="./gallery-screen.png"
+                      alt="screen cap from photo gallery app"
+                      className="work-img"
+                    />
+                  </GridListTile>
+                  <GridListTile
+                    key="5"
+                    cols={4}
+                    rows={2}
+                    onMouseEnter={() => onHover(5)}
+                    onMouseLeave={() => onHover(0)}
+                  >
+                    <img
+                      src="./to-do-screen.png"
+                      alt="screen cap from to do list app"
+                      className="work-img"
+                    />
+                  </GridListTile>
+                </GridList>
               </center>
             </Grid>
           </Grid>
