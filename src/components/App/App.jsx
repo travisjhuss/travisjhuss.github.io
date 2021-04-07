@@ -25,6 +25,16 @@ const useStyles = makeStyles((theme) => ({
     width: 500,
     height: 450,
   },
+  contactLinks: {
+    marginTop: '70px',
+    textAlign: 'left',
+    paddingLeft: '80px',
+  },
+  contactLinks2: {
+    marginTop: '30px',
+    textAlign: 'left',
+    paddingLeft: '80px',
+  },
 }));
 
 function App() {
@@ -35,21 +45,8 @@ function App() {
     setHover(key);
   };
 
-  const openLinkedIn = () => {
-    const newWindow = window.open(
-      'https://www.linkedin.com/in/travisjhuss/',
-      '_blank',
-      'noopener,noreferrer'
-    );
-    if (newWindow) newWindow.opener = null;
-  };
-
-  const openGithub = () => {
-    const newWindow = window.open(
-      'https://github.com/travisjhuss',
-      '_blank',
-      'noopener,noreferrer'
-    );
+  const openLink = (url) => {
+    const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
     if (newWindow) newWindow.opener = null;
   };
 
@@ -141,7 +138,10 @@ function App() {
               </p>
             </Grid>
             <Grid item xs={12}>
-              <p className="subtitle" style={{ marginTop: '-20px', marginBottom: '0px' }}>
+              <p
+                className="subtitle"
+                style={{ marginTop: '-20px', marginBottom: '0px' }}
+              >
                 Skills
               </p>
               <p className="body-text" style={{ textAlign: 'center' }}>
@@ -181,6 +181,11 @@ function App() {
                     rows={2}
                     onMouseEnter={() => onHover(1)}
                     onMouseLeave={() => onHover(0)}
+                    onClick={() =>
+                      openLink(
+                        'https://github.com/travisjhuss/bekome-prime-group-project'
+                      )
+                    }
                   >
                     <img
                       src="./explore-view2.png"
@@ -194,6 +199,11 @@ function App() {
                     rows={2}
                     onMouseEnter={() => onHover(2)}
                     onMouseLeave={() => onHover(0)}
+                    onClick={() =>
+                      openLink(
+                        'https://github.com/travisjhuss/movie-collection'
+                      )
+                    }
                   >
                     <img
                       src="./movie-screen-2.png"
@@ -207,6 +217,11 @@ function App() {
                     rows={2}
                     onMouseEnter={() => onHover(3)}
                     onMouseLeave={() => onHover(0)}
+                    onClick={() =>
+                      openLink(
+                        'https://github.com/travisjhuss/the-condescending-chef'
+                      )
+                    }
                   >
                     <img
                       src="./chef-screen2.png"
@@ -220,6 +235,11 @@ function App() {
                     rows={2}
                     onMouseEnter={() => onHover(4)}
                     onMouseLeave={() => onHover(0)}
+                    onClick={() =>
+                      openLink(
+                        'https://github.com/travisjhuss/photo-gallery-with-react'
+                      )
+                    }
                   >
                     <img
                       src="./gallery-screen.png"
@@ -233,6 +253,9 @@ function App() {
                     rows={2}
                     onMouseEnter={() => onHover(5)}
                     onMouseLeave={() => onHover(0)}
+                    onClick={() =>
+                      openLink('https://github.com/travisjhuss/to-do-list-app')
+                    }
                   >
                     <img
                       src="./to-do-screen.png"
@@ -250,25 +273,61 @@ function App() {
       <div className="container" id="contact" data-aos="fade-right">
         <div className="content">
           <Grid container spacing={2}>
-            <Grid item xs={12}>
+            <Grid item xs={5}>
               <p className="subtitle"> Contact </p>
             </Grid>
-            <Grid item xs={6}>
-              <img
-                alt="linkedin logo"
-                src="./LI-In-Bug.png"
-                width="120px"
-                onClick={openLinkedIn}
-              />
-              <p className="subtitle"> LinkedIn </p>
+            <Grid item xs={7} className={classes.contactLinks}>
+              <div
+                className="link"
+                onClick={() =>
+                  openLink('https://www.linkedin.com/in/travisjhuss')
+                }
+              >
+                <img alt="linkedin logo" src="./LI-In-Bug.png" width="80px" />
+                <span className="contact-link"> LinkedIn </span>
+              </div>
             </Grid>
-            <Grid item xs={6}>
-              <img
-                alt="github logo"
-                src="./GitHub-Mark-120px-plus.png"
-                onClick={openGithub}
-              />
-              <p className="subtitle"> Github </p>
+            <Grid item xs={5}></Grid>
+            <Grid item xs={7} className={classes.contactLinks2}>
+              <div
+                className="link"
+                onClick={() => openLink('https://github.com/travisjhuss')}
+              >
+                <img
+                  alt="github logo"
+                  src="./GitHub-Mark-120px-plus.png"
+                  width="80px"
+                />
+                <span className="contact-link"> Github </span>
+              </div>
+            </Grid>
+            <Grid item xs={5}></Grid>
+            <Grid item xs={7} className={classes.contactLinks2}>
+              <div
+                className="link"
+                onClick={() => openLink('https://github.com/travisjhuss')}
+              >
+                <img
+                  alt="email icon"
+                  src="./email.png"
+                  width="80px"
+                />
+                <span className="contact-link"> Email </span>
+              </div>
+            </Grid>
+            <Grid item xs={5}></Grid>
+            <Grid item xs={7} className={classes.contactLinks2}>
+              <div
+                className="link"
+                onClick={() => openLink('https://github.com/travisjhuss')}
+              >
+                <img
+                  alt="resume icon"
+                  src="./resume.png"
+                  width="80px"
+                />
+                <span className="contact-link"> Resume </span>
+              </div>
             </Grid>
           </Grid>
         </div>
