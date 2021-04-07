@@ -30,11 +30,6 @@ const useStyles = makeStyles((theme) => ({
     textAlign: 'left',
     paddingLeft: '80px',
   },
-  contactLinks2: {
-    marginTop: '30px',
-    textAlign: 'left',
-    paddingLeft: '80px',
-  },
 }));
 
 function App() {
@@ -288,7 +283,7 @@ function App() {
               </div>
             </Grid>
             <Grid item xs={5}></Grid>
-            <Grid item xs={7} className={classes.contactLinks2}>
+            <Grid item xs={7} className={classes.contactLinks}>
               <div
                 className="link"
                 onClick={() => openLink('https://github.com/travisjhuss')}
@@ -302,24 +297,10 @@ function App() {
               </div>
             </Grid>
             <Grid item xs={5}></Grid>
-            <Grid item xs={7} className={classes.contactLinks2}>
+            <Grid item xs={7} className={classes.contactLinks}>
               <div
                 className="link"
-                onClick={() => openLink('https://github.com/travisjhuss')}
-              >
-                <img
-                  alt="email icon"
-                  src="./email.png"
-                  width="80px"
-                />
-                <span className="contact-link"> Email </span>
-              </div>
-            </Grid>
-            <Grid item xs={5}></Grid>
-            <Grid item xs={7} className={classes.contactLinks2}>
-              <div
-                className="link"
-                onClick={() => openLink('https://github.com/travisjhuss')}
+                onClick={() => openLink('/resume2021.pdf')}
               >
                 <img
                   alt="resume icon"
