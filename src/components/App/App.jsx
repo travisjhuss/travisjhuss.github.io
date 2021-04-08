@@ -39,6 +39,7 @@ function App() {
   const [lastYPos, setLastYPos] = useState(0);
   const [shouldShowName, setShouldShowName] = useState(false);
   const [shouldShowTitle, setShouldShowTitle] = useState(false);
+  const [shouldHideArrow, setShouldHideArrow] = useState(false);
 
   useEffect(() => {
     function handleScrollName() {
@@ -57,8 +58,17 @@ function App() {
       setLastYPos(yPos);
     }
 
+    function handleScrollArrow() {
+      const yPos = window.scrollY;
+      const isAtBottom = yPos > 2500;
+
+      setShouldHideArrow(isAtBottom);
+      setLastYPos(yPos);
+    }
+
     window.addEventListener('scroll', handleScrollName, false);
     window.addEventListener('scroll', handleScrollTitle, false);
+    window.addEventListener('scroll', handleScrollArrow, false);
 
     // return () => {
     //   window.removeEventListener('scroll', handleScrollName, false);
@@ -83,7 +93,7 @@ function App() {
             className="header-name"
             initial={{ opacity: 0 }}
             animate={{ opacity: shouldShowName ? 1 : 0 }}
-            transition={{ opacity: { duration: 0.2 } }}
+            transition={{ opacity: { duration: 0.3 } }}
           >
             <Link
               // className="header-name"
@@ -101,7 +111,7 @@ function App() {
             className="header-title"
             initial={{ opacity: 0 }}
             animate={{ opacity: shouldShowTitle ? 1 : 0 }}
-            transition={{ opacity: { duration: 0.2 } }}
+            transition={{ opacity: { duration: 0.3 } }}
           >
             <Link
               // className="header-title"
@@ -153,7 +163,12 @@ function App() {
         </div>
       </div>
 
-      <div className="scroll-note">
+      <motion.div
+        className="scroll-note"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: !shouldHideArrow ? 1 : 0 }}
+        transition={{ opacity: { duration: 0.3 } }}
+      >
         <ArrowRightAltIcon
           style={{
             fontSize: '60px',
@@ -166,7 +181,7 @@ function App() {
           <p className="scroll-word">For</p>
           <p className="scroll-word">More</p>
         </div>
-      </div>
+      </motion.div>
 
       <div className="top">
         <img
