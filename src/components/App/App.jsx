@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { useState, useEffect } from 'react';
+import { Link } from 'react-scroll';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -11,6 +11,7 @@ import Todo from '../Work/Todo';
 import Gallery from '../Work/Gallery';
 import Movie from '../Work/Movie';
 import Details from '../Work/Details';
+import { motion } from 'framer-motion';
 import './App.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +36,44 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const [hover, setHover] = useState(0);
+  const [lastYPos, setLastYPos] = useState(0);
+  const [shouldShowName, setShouldShowName] = useState(false);
+  const [shouldShowTitle, setShouldShowTitle] = useState(false);
+  const [shouldHideArrow, setShouldHideArrow] = useState(false);
+
+  useEffect(() => {
+    function handleScrollName() {
+      const yPos = window.scrollY;
+      const isPastName = yPos > 140;
+
+      setShouldShowName(isPastName);
+      setLastYPos(yPos);
+    }
+
+    function handleScrollTitle() {
+      const yPos = window.scrollY;
+      const isPastTitle = yPos > 663;
+
+      setShouldShowTitle(isPastTitle);
+      setLastYPos(yPos);
+    }
+
+    function handleScrollArrow() {
+      const yPos = window.scrollY;
+      const isAtBottom = yPos > 2500;
+
+      setShouldHideArrow(isAtBottom);
+      setLastYPos(yPos);
+    }
+
+    window.addEventListener('scroll', handleScrollName, false);
+    window.addEventListener('scroll', handleScrollTitle, false);
+    window.addEventListener('scroll', handleScrollArrow, false);
+
+    // return () => {
+    //   window.removeEventListener('scroll', handleScrollName, false);
+    // };
+  }, [lastYPos]);
 
   const onHover = (key) => {
     setHover(key);
@@ -48,42 +87,80 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <Link
-          className="link"
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          // offset={}
-          duration={500}
-        >
-          About
-        </Link>
-        <Link
-          className="link"
-          activeClass="active"
-          to="work"
-          spy={true}
-          smooth={true}
-          // offset={}
-          duration={500}
-        >
-          Work
-        </Link>
-        <Link
-          className="link"
-          activeClass="active"
-          to="contact"
-          spy={true}
-          smooth={true}
-          // offset={}
-          duration={500}
-        >
-          Contact
-        </Link>
+        <div className="header-left">
+          <motion.div
+            className="header-name"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: shouldShowName ? 1 : 0 }}
+            transition={{ opacity: { duration: 0.3 } }}
+          >
+            <Link
+              activeClass="active"
+              to="top"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Travis J. Huss
+            </Link>
+          </motion.div>
+          <motion.div
+            className="header-title"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: shouldShowTitle ? 1 : 0 }}
+            transition={{ opacity: { duration: 0.3 } }}
+          >
+            <Link
+              activeClass="active"
+              to="top"
+              spy={true}
+              smooth={true}
+              duration={500}
+            >
+              Full Stack Software Engineer
+            </Link>
+          </motion.div>
+        </div>
+        <div className="header-nav">
+          <Link
+            className="link"
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            About
+          </Link>
+          <Link
+            className="link"
+            activeClass="active"
+            to="work"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Work
+          </Link>
+          <Link
+            className="link"
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            duration={500}
+          >
+            Contact
+          </Link>
+        </div>
       </div>
 
-      <div className="scroll-note">
+      <motion.div
+        className="scroll-note"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: !shouldHideArrow ? 1 : 0 }}
+        transition={{ opacity: { duration: 0.3 } }}
+      >
         <ArrowRightAltIcon
           style={{
             fontSize: '60px',
@@ -96,14 +173,14 @@ function App() {
           <p className="scroll-word">For</p>
           <p className="scroll-word">More</p>
         </div>
-      </div>
+      </motion.div>
 
       <div className="top">
         <img
           src="./mill-city-museum.png"
           width="530"
           alt="mill city museum in black and white"
-          class="cover-photo"
+          className="cover-photo"
         />
         <div className="name">TRAVIS J HUSS</div>
         <div className="job-title">Full Stack Software Engineer</div>
@@ -116,7 +193,7 @@ function App() {
               <img
                 className="profile-img"
                 src="./Profile-pic-close.png"
-                alt="profile"
+                alt="head shot of Travis Huss"
               />
             </Grid>
             <Grid item xs={4}>
@@ -265,7 +342,7 @@ function App() {
         </div>
       </div>
 
-      <div className="container" id="contact" data-aos="fade-right">
+      <div className="container2" id="contact" data-aos="fade-right">
         <div className="content">
           <Grid container spacing={2}>
             <Grid item xs={5}>
@@ -298,15 +375,8 @@ function App() {
             </Grid>
             <Grid item xs={5}></Grid>
             <Grid item xs={7} className={classes.contactLinks}>
-              <div
-                className="link"
-                onClick={() => openLink('/resume2021.pdf')}
-              >
-                <img
-                  alt="resume icon"
-                  src="./resume.png"
-                  width="80px"
-                />
+              <div className="link" onClick={() => openLink('/resume2021.pdf')}>
+                <img alt="resume icon" src="./resume.png" width="80px" />
                 <span className="contact-link"> Resume </span>
               </div>
             </Grid>

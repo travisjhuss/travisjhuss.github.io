@@ -21,7 +21,6 @@
 
 .header {
   width: 100%;
-  text-align: right;
   padding-top: 10px;
   margin-right: 20px;
   position: fixed;
@@ -30,9 +29,52 @@
   z-index: 12;
 }
 
+.header-left {
+  text-align: left;
+  width: 50%;
+  float: left;
+  display: inline;
+  padding-left: 10px;
+}
+
+.header-name {
+  color: #0d0d0d;
+  font-family: 'Josefin Sans';
+  font-size: 28px;
+  font-weight: 400;
+  display: inline;
+}
+
+.header-title {
+  color: #fff;
+  font-family: 'Josefin Sans';
+  font-size: 28px;
+  font-weight: 400;
+  display: inline;
+  padding-left: 10px;
+  display: inline;
+}
+
+.header-name, .header-title:hover {
+  cursor: pointer;
+}
+
+.header-nav {
+  text-align: right;
+  margin-left: 50%;
+  width: 50%;
+}
+
 .container {
   padding: 50px 10%;
   height: 100vh;
+  /* width: 100%; */
+  position: relative;
+}
+
+.container2 {
+  padding: 50px 10%;
+  height: 80vh;
   /* width: 100%; */
   position: relative;
 }
