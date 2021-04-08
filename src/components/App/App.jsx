@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { Link, animateScroll as scroll } from 'react-scroll';
+import { Link } from 'react-scroll';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import Grid from '@material-ui/core/Grid';
 import { makeStyles } from '@material-ui/core/styles';
@@ -84,7 +84,6 @@ function App() {
     if (newWindow) newWindow.opener = null;
   };
 
-  console.log('y pos:', lastYPos);
   return (
     <div className="App">
       <div className="header">
@@ -96,12 +95,10 @@ function App() {
             transition={{ opacity: { duration: 0.3 } }}
           >
             <Link
-              // className="header-name"
               activeClass="active"
               to="top"
               spy={true}
               smooth={true}
-              // offset={}
               duration={500}
             >
               Travis J. Huss
@@ -114,12 +111,10 @@ function App() {
             transition={{ opacity: { duration: 0.3 } }}
           >
             <Link
-              // className="header-title"
               activeClass="active"
               to="top"
               spy={true}
               smooth={true}
-              // offset={}
               duration={500}
             >
               Full Stack Software Engineer
@@ -133,7 +128,6 @@ function App() {
             to="about"
             spy={true}
             smooth={true}
-            // offset={}
             duration={500}
           >
             About
@@ -144,7 +138,6 @@ function App() {
             to="work"
             spy={true}
             smooth={true}
-            // offset={}
             duration={500}
           >
             Work
@@ -155,7 +148,6 @@ function App() {
             to="contact"
             spy={true}
             smooth={true}
-            // offset={}
             duration={500}
           >
             Contact
@@ -188,7 +180,7 @@ function App() {
           src="./mill-city-museum.png"
           width="530"
           alt="mill city museum in black and white"
-          class="cover-photo"
+          className="cover-photo"
         />
         <div className="name">TRAVIS J HUSS</div>
         <div className="job-title">Full Stack Software Engineer</div>
@@ -201,7 +193,7 @@ function App() {
               <img
                 className="profile-img"
                 src="./Profile-pic-close.png"
-                alt="profile"
+                alt="head shot of Travis Huss"
               />
             </Grid>
             <Grid item xs={4}>
