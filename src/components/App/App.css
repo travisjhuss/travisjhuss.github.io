@@ -21,8 +21,6 @@
 
 .header {
   width: 100%;
-  /* display: flex; */
-  /* text-align: right; */
   padding-top: 10px;
   margin-right: 20px;
   position: fixed;
@@ -44,6 +42,7 @@
   font-family: 'Josefin Sans';
   font-size: 28px;
   font-weight: 400;
+  display: inline;
 }
 
 .header-title {
@@ -53,6 +52,7 @@
   font-weight: 400;
   display: inline;
   padding-left: 10px;
+  display: inline;
 }
 
 .header-name, .header-title:hover {
@@ -68,6 +68,13 @@
 .container {
   padding: 50px 10%;
   height: 100vh;
+  /* width: 100%; */
+  position: relative;
+}
+
+.container2 {
+  padding: 50px 10%;
+  height: 80vh;
   /* width: 100%; */
   position: relative;
 }

@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Link, animateScroll as scroll } from 'react-scroll';
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import Grid from '@material-ui/core/Grid';
@@ -11,6 +11,7 @@ import Todo from '../Work/Todo';
 import Gallery from '../Work/Gallery';
 import Movie from '../Work/Movie';
 import Details from '../Work/Details';
+import { motion } from 'framer-motion';
 import './App.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -35,6 +36,34 @@ const useStyles = makeStyles((theme) => ({
 function App() {
   const classes = useStyles();
   const [hover, setHover] = useState(0);
+  const [lastYPos, setLastYPos] = useState(0);
+  const [shouldShowName, setShouldShowName] = useState(false);
+  const [shouldShowTitle, setShouldShowTitle] = useState(false);
+
+  useEffect(() => {
+    function handleScrollName() {
+      const yPos = window.scrollY;
+      const isPastName = yPos > 140;
+
+      setShouldShowName(isPastName);
+      setLastYPos(yPos);
+    }
+
+    function handleScrollTitle() {
+      const yPos = window.scrollY;
+      const isPastTitle = yPos > 663;
+
+      setShouldShowTitle(isPastTitle);
+      setLastYPos(yPos);
+    }
+
+    window.addEventListener('scroll', handleScrollName, false);
+    window.addEventListener('scroll', handleScrollTitle, false);
+
+    // return () => {
+    //   window.removeEventListener('scroll', handleScrollName, false);
+    // };
+  }, [lastYPos]);
 
   const onHover = (key) => {
     setHover(key);
@@ -45,32 +74,47 @@ function App() {
     if (newWindow) newWindow.opener = null;
   };
 
+  console.log('y pos:', lastYPos);
   return (
     <div className="App">
       <div className="header">
         <div className="header-left">
-          <Link
+          <motion.div
             className="header-name"
-            activeClass="active"
-            to="top"
-            spy={true}
-            smooth={true}
-            // offset={}
-            duration={500}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: shouldShowName ? 1 : 0 }}
+            transition={{ opacity: { duration: 0.2 } }}
           >
-            Travis J. Huss
-          </Link>
-          <Link
+            <Link
+              // className="header-name"
+              activeClass="active"
+              to="top"
+              spy={true}
+              smooth={true}
+              // offset={}
+              duration={500}
+            >
+              Travis J. Huss
+            </Link>
+          </motion.div>
+          <motion.div
             className="header-title"
-            activeClass="active"
-            to="top"
-            spy={true}
-            smooth={true}
-            // offset={}
-            duration={500}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: shouldShowTitle ? 1 : 0 }}
+            transition={{ opacity: { duration: 0.2 } }}
           >
-            Full Stack Software Engineer
-          </Link>
+            <Link
+              // className="header-title"
+              activeClass="active"
+              to="top"
+              spy={true}
+              smooth={true}
+              // offset={}
+              duration={500}
+            >
+              Full Stack Software Engineer
+            </Link>
+          </motion.div>
         </div>
         <div className="header-nav">
           <Link
@@ -291,7 +335,7 @@ function App() {
         </div>
       </div>
 
-      <div className="container" id="contact" data-aos="fade-right">
+      <div className="container2" id="contact" data-aos="fade-right">
         <div className="content">
           <Grid container spacing={2}>
             <Grid item xs={5}>
