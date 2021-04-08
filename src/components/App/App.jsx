@@ -48,39 +48,65 @@ function App() {
   return (
     <div className="App">
       <div className="header">
-        <Link
-          className="link"
-          activeClass="active"
-          to="about"
-          spy={true}
-          smooth={true}
-          // offset={}
-          duration={500}
-        >
-          About
-        </Link>
-        <Link
-          className="link"
-          activeClass="active"
-          to="work"
-          spy={true}
-          smooth={true}
-          // offset={}
-          duration={500}
-        >
-          Work
-        </Link>
-        <Link
-          className="link"
-          activeClass="active"
-          to="contact"
-          spy={true}
-          smooth={true}
-          // offset={}
-          duration={500}
-        >
-          Contact
-        </Link>
+        <div className="header-left">
+          <Link
+            className="header-name"
+            activeClass="active"
+            to="top"
+            spy={true}
+            smooth={true}
+            // offset={}
+            duration={500}
+          >
+            Travis J. Huss
+          </Link>
+          <Link
+            className="header-title"
+            activeClass="active"
+            to="top"
+            spy={true}
+            smooth={true}
+            // offset={}
+            duration={500}
+          >
+            Full Stack Software Engineer
+          </Link>
+        </div>
+        <div className="header-nav">
+          <Link
+            className="link"
+            activeClass="active"
+            to="about"
+            spy={true}
+            smooth={true}
+            // offset={}
+            duration={500}
+          >
+            About
+          </Link>
+          <Link
+            className="link"
+            activeClass="active"
+            to="work"
+            spy={true}
+            smooth={true}
+            // offset={}
+            duration={500}
+          >
+            Work
+          </Link>
+          <Link
+            className="link"
+            activeClass="active"
+            to="contact"
+            spy={true}
+            smooth={true}
+            // offset={}
+            duration={500}
+          >
+            Contact
+          </Link>
+        </div>
       </div>
 
       <div className="scroll-note">
@@ -298,15 +324,8 @@ function App() {
             </Grid>
             <Grid item xs={5}></Grid>
             <Grid item xs={7} className={classes.contactLinks}>
-              <div
-                className="link"
-                onClick={() => openLink('/resume2021.pdf')}
-              >
-                <img
-                  alt="resume icon"
-                  src="./resume.png"
-                  width="80px"
-                />
+              <div className="link" onClick={() => openLink('/resume2021.pdf')}>
+                <img alt="resume icon" src="./resume.png" width="80px" />
                 <span className="contact-link"> Resume </span>
               </div>
             </Grid>
