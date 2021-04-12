@@ -375,7 +375,7 @@ function App() {
             </Grid>
             <Grid item xs={5}></Grid>
             <Grid item xs={7} className={classes.contactLinks}>
-              <div className="link" onClick={() => openLink('/resume2021.pdf')}>
+              <div className="link" onClick={() => openLink('/Resume2021.pdf')}>
                 <img alt="resume icon" src="./resume.png" width="80px" />
                 <span className="contact-link"> Resume </span>
               </div>
