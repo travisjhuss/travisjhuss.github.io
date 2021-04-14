@@ -4,6 +4,11 @@
   background-color: #ecd2b3;
 }
 
+html {
+  background-color: #ecd2b3;
+  max-width: 100%;
+}
+
 .link {
   color: #fff;
   font-family: 'Josefin Sans';
@@ -183,6 +188,7 @@
   grid-column: 1 / 21;
   justify-self: center;
   opacity: 0.8;
+  max-width: 530px;
 }
 
 .work-img {
@@ -217,4 +223,11 @@
   text-align: left;
   z-index: 9;
   /* position: relative; */
+}
+
+@media only screen and (max-device-width: 480px) {
+  .top, .container, .container2 {
+    width: 184%;
+  }
+
 }

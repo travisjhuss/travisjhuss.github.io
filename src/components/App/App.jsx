@@ -178,7 +178,7 @@ function App() {
       <div className="top">
         <img
           src="./mill-city-museum.png"
-          width="530"
+          // width="530"
           alt="mill city museum in black and white"
           className="cover-photo"
         />
