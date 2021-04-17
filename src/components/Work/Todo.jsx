@@ -11,7 +11,8 @@ function Todo() {
       <p>
         The app has the ability to add tasks under a few different categories
         where you can set a priority level to it as well. Tasks can be deleted
-        and sorted by the various attributes assigned to that task.
+        and sorted by the various attributes assigned to that task. The app was built with 
+        jQuery, Bootstrap, PostgreSQL, and more. 
       </p>
     </div>
   );

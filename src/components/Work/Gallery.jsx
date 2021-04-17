@@ -10,7 +10,8 @@ function Gallery() {
       </p>
       <p>
         Building this app allowed me to get more familiar with Material UI
-        and customizing their built in styles.
+        and customizing their built in styles. The app is built with React,
+        Redux, Node, Express, PostgreSQL, and Material UI.
       </p>
     </div>
   );

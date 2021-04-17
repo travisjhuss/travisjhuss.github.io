@@ -9,17 +9,18 @@ function Bekome() {
         width="500"
       /> */}
       <p>
-        Finding a therapist that you gel with isn't easy. It's a long process
-        that usually involves a lot of trial and error and persistence. Many
-        people seeking therapy give up before they even start. bekome aims to
-        make the act of matching therapists to clients a painless process.
-      </p>
-      <p>
-        The app is set up similarly to a dating app, such as Hinge. Clients and
+        Built as part of a client group project at Prime Digital Academy. Our
+        clients wanted to address the difficulties of finding a therapist by
+        creating an app similar to a dating app, such as Hinge. Clients and
         providers respectively set up their profiles with personal info,
         preferences, profile picture, and more. Then clients are able to browse
         and filter through providers and communicate with the ones who seem like
         a good fit.
+      </p>
+      <p>
+        The app is built with React, Redux, Node, Express, PostgreSQL, Material
+        UI, Socket.io, and Swiper. I personally worked on the backend code that
+        handles the completed forms as well as styling on the front end.
       </p>
     </div>
   );
