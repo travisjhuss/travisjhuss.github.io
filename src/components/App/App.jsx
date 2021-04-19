@@ -194,18 +194,18 @@ function App() {
       <div className="container" id="about">
         <div className="content">
           <Grid container spacing={2}>
-            <Grid item xs={3}>
+            <Grid item sm={3} xs={6}>
               <img
                 className="profile-img"
                 src="./Profile-pic-close.png"
                 alt="head shot of Travis Huss"
               />
             </Grid>
-            <Grid item xs={4}>
+            <Grid item sm={4} xs={6}>
               <p className="subtitle">About</p>
             </Grid>
-            <Grid item xs={5} style={{ marginTop: '150px' }}>
-              <p className="body-text">
+            <Grid item sm={5} xs= {12}>
+              <p className="body-text about-text">
                 Accomplished leader in the hospitality industry now bringing the
                 skills cultivated over the past 15 years to a career in software
                 engineering. Strong organizational and communication skills, the
