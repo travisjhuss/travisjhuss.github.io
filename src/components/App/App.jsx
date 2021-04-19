@@ -181,14 +181,14 @@ function App() {
       </motion.div>
 
       <div className="top">
+        <div className="name">TRAVIS J HUSS</div>
+        <div className="job-title">Full Stack Software Engineer</div>
         <img
           src="./mill-city-museum.png"
           // width="530"
           alt="mill city museum in black and white"
           className="cover-photo"
         />
-        <div className="name">TRAVIS J HUSS</div>
-        <div className="job-title">Full Stack Software Engineer</div>
       </div>
 
       <div className="container" id="about">
@@ -204,7 +204,7 @@ function App() {
             <Grid item sm={4} xs={6}>
               <p className="subtitle">About</p>
             </Grid>
-            <Grid item sm={5} xs= {12}>
+            <Grid item sm={5} xs={12}>
               <p className="body-text about-text">
                 Accomplished leader in the hospitality industry now bringing the
                 skills cultivated over the past 15 years to a career in software
