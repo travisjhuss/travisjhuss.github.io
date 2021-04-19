@@ -215,12 +215,7 @@ function App() {
               </p>
             </Grid>
             <Grid item xs={12}>
-              <p
-                className="subtitle"
-                style={{ marginTop: '-20px', marginBottom: '0px' }}
-              >
-                Skills
-              </p>
+              <p className="subtitle skills-header">Skills</p>
               <p className="body-text" style={{ textAlign: 'center' }}>
                 JavaScript | CSS | React | Redux | Express | Node
               </p>
@@ -235,6 +230,10 @@ function App() {
       <div className="container" id="work" data-aos="fade-up">
         <div className="content">
           <Grid container spacing={4}>
+            <Grid item xs={0} sm={6}></Grid>
+            <Grid item xs={12} sm={6}>
+              <p className="subtitle"> Work </p>
+            </Grid>
             <Grid item xs={6}>
               {hover === 0 && <Details />}
               {hover === 1 && <Bekome />}
@@ -244,7 +243,7 @@ function App() {
               {hover === 5 && <Todo />}
             </Grid>
             <Grid item xs={6}>
-              <p className="subtitle"> Work </p>
+              {/* <p className="subtitle"> Work </p> */}
               <center>
                 <GridList
                   cellHeight={75}

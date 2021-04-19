@@ -1,11 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100;200;300;400;500;600;700&display=swap');
 
 .App {
-  background-color: #ecd2b3;
+  background-color: #ddc19f;
 }
 
 html {
-  background-color: #ecd2b3;
+  background-color: #ddc19f;
   max-width: 100%;
 }
 
@@ -30,7 +30,7 @@ html {
   margin-right: 20px;
   position: fixed;
   top: 0%;
-  background-color: #ecd2b3;
+  background-color: #ddc19f;
   z-index: 12;
 }
 
@@ -213,7 +213,6 @@ html {
   text-align: right;
   z-index: 9;
   position: relative;
-  margin-top: 160px;
 }
 
 .contact-link {
@@ -230,15 +229,19 @@ html {
   margin-top: 150px;
 }
 
+.skills-header {
+  margin-top: -10px;
+  margin-bottom: 0px;
+}
+
 @media only screen and (max-width: 480px) {
-  /* .top,
   .container,
   .container2 {
-    width: 184%;
-  } */
+    padding: 0px 10%;
+  }
 
   .header {
-    height: 50px;
+    height: 30px;
   }
 
   .header-left {
@@ -257,7 +260,7 @@ html {
   .top {
     height: 100vh;
   }
-  
+
   .cover-photo {
     height: 80vh;
   }
@@ -276,7 +279,7 @@ html {
 
   .header-name,
   .header-title {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .name {
@@ -291,5 +294,4 @@ html {
     z-index: 10;
     margin-left: 12px;
   }
-
 }
