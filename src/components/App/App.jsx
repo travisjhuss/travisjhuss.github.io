@@ -349,22 +349,26 @@ function App() {
       <div className="container2" id="contact" data-aos="fade-right">
         <div className="content">
           <Grid container spacing={2}>
-            <Grid item xs={5} s={12}>
+            <Grid item xs={5}>
               <p className="subtitle"> Contact </p>
             </Grid>
-            <Grid item xs={7} s={12} className={classes.contactLinksTop}>
+            <Grid item xs={7} className={classes.contactLinksTop}>
               <div
                 className="link"
                 onClick={() =>
                   openLink('https://www.linkedin.com/in/travisjhuss')
                 }
               >
-                <img alt="linkedin logo" src="./LI-In-Bug.png" width="60px" />
+                <img
+                  alt="linkedin logo"
+                  src="./LI-In-Bug.png"
+                  className="contact-img"
+                />
                 <span className="contact-link"> LinkedIn </span>
               </div>
             </Grid>
-            <Grid item xs={5} s={0}></Grid>
-            <Grid item xs={7} s={12} className={classes.contactLinks}>
+            <Grid item xs={5}></Grid>
+            <Grid item xs={7} className={classes.contactLinks}>
               <div
                 className="link"
                 onClick={() => openLink('https://github.com/travisjhuss')}
@@ -372,15 +376,19 @@ function App() {
                 <img
                   alt="github logo"
                   src="./GitHub-Mark-120px-plus.png"
-                  width="60px"
+                  className="contact-img"
                 />
                 <span className="contact-link"> Github </span>
               </div>
             </Grid>
-            <Grid item xs={5} s={0}></Grid>
-            <Grid item xs={7} s={12} className={classes.contactLinks}>
+            <Grid item xs={5}></Grid>
+            <Grid item xs={7} className={classes.contactLinks}>
               <div className="link" onClick={() => openLink('/Resume2021.pdf')}>
-                <img alt="resume icon" src="./resume.png" width="60px" />
+                <img
+                  alt="resume icon"
+                  src="./resume.png"
+                  className="contact-img"
+                />
                 <span className="contact-link"> Resume </span>
               </div>
             </Grid>
