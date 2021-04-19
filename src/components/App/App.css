@@ -217,6 +217,14 @@ html {
   position: relative;
 }
 
+.work-text-mobile {
+  color: #0d0d0d;
+  font-family: 'Josefin Sans';
+  font-size: 18px;
+  font-weight: 300;
+  text-align: left;
+}
+
 .contact-link {
   color: #0d0d0d;
   font-family: 'Josefin Sans';
@@ -238,6 +246,11 @@ html {
 
 .contact-img {
   width: 60px;
+}
+
+.work-img-mobile {
+  object-fit: contain;
+  width: 100%;
 }
 
 @media only screen and (max-width: 480px) {
@@ -307,5 +320,10 @@ html {
 
   .contact-img {
     width: 40px;
+  }
+
+  .work-text {
+    font-size: 16px;
+    text-align: left;
   }
 }
