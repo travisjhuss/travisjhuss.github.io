@@ -1,4 +1,5 @@
-function Todo() {
+function Todo({openLink}) {
+
   return (
     <div className="work-text">
       <h3>What To Do's</h3>
@@ -14,6 +15,18 @@ function Todo() {
         and sorted by the various attributes assigned to that task. The app was built with 
         jQuery, Bootstrap, PostgreSQL, and more. 
       </p>
+      <div className="mobile-btn">
+        <button
+          className="work-btn"
+          onClick={() =>
+            openLink(
+              'https://github.com/travisjhuss/to-do-list-app'
+            )
+          }
+        >
+          Github
+        </button>
+      </div>
     </div>
   );
 }

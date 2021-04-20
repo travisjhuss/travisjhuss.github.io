@@ -1,4 +1,5 @@
-function Gallery() {
+function Gallery({openLink}) {
+
   return (
     <div className="work-text">
       <h3>My Best Friend, Morton</h3>
@@ -13,6 +14,18 @@ function Gallery() {
         and customizing their built in styles. The app is built with React,
         Redux, Node, Express, PostgreSQL, and Material UI.
       </p>
+      <div className="mobile-btn">
+        <button
+          className="work-btn"
+          onClick={() =>
+            openLink(
+              'https://github.com/travisjhuss/photo-gallery-with-react'
+            )
+          }
+        >
+          Github
+        </button>
+      </div>
     </div>
   );
 }

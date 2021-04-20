@@ -1,4 +1,5 @@
-function Chef() {
+function Chef({openLink}) {
+
   return (
     <div className="work-text">
       <h3>The Condescending Chef</h3>
@@ -15,6 +16,18 @@ function Chef() {
         online, or even their own personal recipes. The app is built with React,
         Redux, Node, Express, PostgreSQL, and Material UI.
       </p>
+      <div className="mobile-btn">
+        <button
+          className="work-btn"
+          onClick={() =>
+            openLink(
+              'https://github.com/travisjhuss/the-condescending-chef'
+            )
+          }
+        >
+          Github
+        </button>
+      </div>
     </div>
   );
 }

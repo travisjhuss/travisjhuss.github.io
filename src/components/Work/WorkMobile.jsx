@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-function WorkMobile() {
+function WorkMobile({openLink}) {
   const classes = useStyles();
   const [details, setDetails] = useState(0);
 
@@ -32,7 +32,7 @@ function WorkMobile() {
 
   return (
     <div className="work-text-mobile">
-      <p>Scroll left to right. Click for details.</p>
+      <p className="work-text-scroll">Scroll left to right. Click for details.</p>
       <div className={classes.root}>
         <GridList className={classes.gridList} cols={1}>
           <GridListTile onClick={() => onDetailClick(1)}>
@@ -72,11 +72,11 @@ function WorkMobile() {
           </GridListTile>
         </GridList>
       </div>
-      {details === 1 && <Bekome />}
-      {details === 2 && <Movie />}
-      {details === 3 && <Chef />}
-      {details === 4 && <Gallery />}
-      {details === 5 && <Todo />}
+      {details === 1 && <Bekome openLink={openLink}/>}
+      {details === 2 && <Movie openLink={openLink}/>}
+      {details === 3 && <Chef openLink={openLink}/>}
+      {details === 4 && <Gallery openLink={openLink}/>}
+      {details === 5 && <Todo openLink={openLink}/>}
     </div>
   );
 }

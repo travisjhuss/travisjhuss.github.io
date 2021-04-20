@@ -1,4 +1,5 @@
-function Movie() {
+function Movie({openLink}) {
+
   return (
     <div className="work-text">
       <h3>The Travis Movie Database (TMDb)</h3>
@@ -10,6 +11,18 @@ function Movie() {
         posters that can be clicked on to view more details. Users can also use
         a search function to easily find what they are looking for.
       </p>
+      <div className="mobile-btn">
+        <button
+          className="work-btn"
+          onClick={() =>
+            openLink(
+              'https://github.com/travisjhuss/movie-collection'
+            )
+          }
+        >
+          Github
+        </button>
+      </div>
     </div>
   );
 }

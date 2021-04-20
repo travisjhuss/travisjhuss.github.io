@@ -8,7 +8,7 @@
 
 html {
   background-color: #dab08e;
-  max-width: 100%;
+  width: 100%;
 }
 
 .link {
@@ -225,6 +225,12 @@ html {
   text-align: left;
 }
 
+.work-text-scroll {
+  margin-top: 0px;
+  margin-bottom: 0px;
+  text-align: center;
+}
+
 .contact-link {
   color: #0d0d0d;
   font-family: 'Josefin Sans';
@@ -253,6 +259,22 @@ html {
   width: 100%;
 }
 
+.mobile-btn {
+  visibility: hidden;
+}
+
+.work-btn {
+  height: 48px;
+  width: 90px;
+  color: #fff;
+  font-family: 'Josefin Sans';
+  font-size: 18px;
+  font-weight: 300;
+  background-color: #0d0d0d;
+  border: #dab08e 1px solid;
+  border-radius: 5px;
+}
+
 @media only screen and (max-width: 480px) {
   .container,
   .container2 {
@@ -278,10 +300,12 @@ html {
 
   .top {
     height: 100vh;
+    margin-top: 50px;
   }
 
   .cover-photo {
-    height: 80vh;
+    height: 72vh;
+    width: 100vw;
   }
 
   .about-text {
@@ -325,5 +349,9 @@ html {
   .work-text {
     font-size: 16px;
     text-align: left;
+  }
+
+  .mobile-btn {
+    visibility: visible;
   }
 }

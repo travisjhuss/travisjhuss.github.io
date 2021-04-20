@@ -1,4 +1,5 @@
-function Bekome() {
+function Bekome({openLink}) {
+
   return (
     <div className="work-text">
       <h3>bekome</h3>
@@ -22,6 +23,18 @@ function Bekome() {
         UI, Socket.io, and Swiper. I personally worked on the backend code that
         handles the completed forms as well as styling on the front end.
       </p>
+      <div className="mobile-btn">
+        <button
+          className="work-btn"
+          onClick={() =>
+            openLink(
+              'https://github.com/travisjhuss/bekome-prime-group-project'
+            )
+          }
+        >
+          Github
+        </button>
+      </div>
     </div>
   );
 }

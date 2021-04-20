@@ -238,7 +238,7 @@ function App() {
               <p className="subtitle"> Work </p>
             </Grid>
             {mobile ? (
-              <WorkMobile />
+              <WorkMobile openLink={openLink}/>
             ) : (
               <>
                 <Grid item xs={6}>
