@@ -42,7 +42,7 @@ const useStyles = makeStyles((theme) => ({
 
 function App() {
   const classes = useStyles();
-  const mobile = useMediaQuery('(max-width:480px)');
+  const mobile = useMediaQuery('(max-width:700px)');
   const [hover, setHover] = useState(0);
   const [lastYPos, setLastYPos] = useState(0);
   const [shouldShowName, setShouldShowName] = useState(false);
@@ -192,6 +192,13 @@ function App() {
           alt="mill city museum in black and white"
           className="cover-photo"
         />
+        {mobile && (
+          <div className="scroll-text-mobile">
+            <p className="scroll-word">Scroll</p>
+            <p className="scroll-word">For</p>
+            <p className="scroll-word">More</p>
+          </div>
+        )}
       </div>
 
       <div className="container" id="about">
@@ -238,7 +245,7 @@ function App() {
               <p className="subtitle"> Work </p>
             </Grid>
             {mobile ? (
-              <WorkMobile openLink={openLink}/>
+              <WorkMobile openLink={openLink} />
             ) : (
               <>
                 <Grid item xs={6}>
