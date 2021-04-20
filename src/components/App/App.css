@@ -328,6 +328,7 @@ html {
 
   .name {
     font-size: 40px;
+    grid-row: 2;
   }
 
   .job-title {
