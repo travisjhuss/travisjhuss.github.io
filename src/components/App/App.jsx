@@ -1,11 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Link } from 'react-scroll';
+// MUI
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import Grid from '@material-ui/core/Grid';
-import { makeStyles } from '@material-ui/core/styles';
-import GridList from '@material-ui/core/GridList';
-import GridListTile from '@material-ui/core/GridListTile';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
+import { Grid, GridList, GridListTile, useMediaQuery } from '@material-ui/core';
+// Component Imports
 import Bekome from '../Work/Bekome';
 import Chef from '../Work/Chef';
 import Todo from '../Work/Todo';
@@ -13,32 +10,13 @@ import Gallery from '../Work/Gallery';
 import Movie from '../Work/Movie';
 import Details from '../Work/Details';
 import WorkMobile from '../Work/WorkMobile';
+import Contact from '../Contact/Contact';
+// Animation
 import { motion } from 'framer-motion';
+import { Link } from 'react-scroll';
+// Styling
 import './App.css';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-    backgroundColor: theme.palette.background.paper,
-  },
-  gridList: {
-    width: 500,
-    height: 450,
-  },
-  contactLinks: {
-    marginTop: '70px',
-    textAlign: 'left',
-    paddingLeft: '80px',
-  },
-  contactLinksTop: {
-    marginTop: '150px',
-    textAlign: 'left',
-    paddingLeft: '80px',
-  },
-}));
+import useStyles from '../hooks/useStyles';
 
 function App() {
   const classes = useStyles();
@@ -77,10 +55,6 @@ function App() {
     window.addEventListener('scroll', handleScrollName, false);
     window.addEventListener('scroll', handleScrollTitle, false);
     window.addEventListener('scroll', handleScrollArrow, false);
-
-    // return () => {
-    //   window.removeEventListener('scroll', handleScrollName, false);
-    // };
   }, [lastYPos]);
 
   const onHover = (key) => {
@@ -365,53 +339,7 @@ function App() {
       </div>
 
       <div className="container2" id="contact" data-aos="fade-right">
-        <div className="content">
-          <Grid container spacing={2}>
-            <Grid item xs={5}>
-              <p className="subtitle"> Contact </p>
-            </Grid>
-            <Grid item xs={7} className={classes.contactLinksTop}>
-              <div
-                className="link"
-                onClick={() =>
-                  openLink('https://www.linkedin.com/in/travisjhuss')
-                }
-              >
-                <img
-                  alt="linkedin logo"
-                  src="./LI-In-Bug.png"
-                  className="contact-img"
-                />
-                <span className="contact-link"> LinkedIn </span>
-              </div>
-            </Grid>
-            <Grid item xs={5}></Grid>
-            <Grid item xs={7} className={classes.contactLinks}>
-              <div
-                className="link"
-                onClick={() => openLink('https://github.com/travisjhuss')}
-              >
-                <img
-                  alt="github logo"
-                  src="./GitHub-Mark-120px-plus.png"
-                  className="contact-img"
-                />
-                <span className="contact-link"> Github </span>
-              </div>
-            </Grid>
-            <Grid item xs={5}></Grid>
-            <Grid item xs={7} className={classes.contactLinks}>
-              <div className="link" onClick={() => openLink('/Resume2021.pdf')}>
-                <img
-                  alt="resume icon"
-                  src="./resume.png"
-                  className="contact-img"
-                />
-                <span className="contact-link"> Resume </span>
-              </div>
-            </Grid>
-          </Grid>
-        </div>
+        <Contact openLink={openLink}/>
       </div>
     </div>
   );
