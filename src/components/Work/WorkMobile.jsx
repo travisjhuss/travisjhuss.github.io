@@ -4,23 +4,11 @@ import Chef from '../Work/Chef';
 import Todo from '../Work/Todo';
 import Gallery from '../Work/Gallery';
 import Movie from '../Work/Movie';
-import { makeStyles } from '@material-ui/core/styles';
+// MUI
 import GridList from '@material-ui/core/GridList';
 import GridListTile from '@material-ui/core/GridListTile';
-
-const useStyles = makeStyles((theme) => ({
-  root: {
-    display: 'flex',
-    flexWrap: 'wrap',
-    justifyContent: 'space-around',
-    overflow: 'hidden',
-  },
-  gridList: {
-    flexWrap: 'nowrap',
-    // Promote the list into his own layer on Chrome. This cost memory but helps keeping high FPS.
-    transform: 'translateZ(0)',
-  },
-}));
+// Custom Hook
+import useStyles from '../hooks/useStyles';
 
 function WorkMobile({openLink}) {
   const classes = useStyles();
@@ -34,7 +22,7 @@ function WorkMobile({openLink}) {
     <div className="work-text-mobile">
       <p className="work-text-scroll">Scroll left to right. Click for details.</p>
       <div className={classes.root}>
-        <GridList className={classes.gridList} cols={1}>
+        <GridList className={classes.gridList2} cols={1}>
           <GridListTile onClick={() => onDetailClick(1)}>
             <img
               src="./explore-view2.png"

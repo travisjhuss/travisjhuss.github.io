@@ -6,7 +6,6 @@ const useStyles = makeStyles((theme) => ({
       flexWrap: 'wrap',
       justifyContent: 'space-around',
       overflow: 'hidden',
-      backgroundColor: theme.palette.background.paper,
     },
     gridList: {
       width: 500,
@@ -21,6 +20,10 @@ const useStyles = makeStyles((theme) => ({
       marginTop: '150px',
       textAlign: 'left',
       paddingLeft: '80px',
+    },
+    gridList2: {
+      flexWrap: 'nowrap',
+      transform: 'translateZ(0)',
     },
   }));
 

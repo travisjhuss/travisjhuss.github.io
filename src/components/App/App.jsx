@@ -1,27 +1,20 @@
 import { useState, useEffect } from 'react';
 // MUI
 import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
-import { Grid, GridList, GridListTile, useMediaQuery } from '@material-ui/core';
+import { Grid, useMediaQuery } from '@material-ui/core';
 // Component Imports
-import Bekome from '../Work/Bekome';
-import Chef from '../Work/Chef';
-import Todo from '../Work/Todo';
-import Gallery from '../Work/Gallery';
-import Movie from '../Work/Movie';
-import Details from '../Work/Details';
 import WorkMobile from '../Work/WorkMobile';
+import WorkDesktop from '../Work/WorkDesktop';
 import Contact from '../Contact/Contact';
+import Top from '../Top/Top';
 // Animation
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
 // Styling
 import './App.css';
-import useStyles from '../hooks/useStyles';
 
 function App() {
-  const classes = useStyles();
   const mobile = useMediaQuery('(max-width:700px)');
-  const [hover, setHover] = useState(0);
   const [lastYPos, setLastYPos] = useState(0);
   const [shouldShowName, setShouldShowName] = useState(false);
   const [shouldShowTitle, setShouldShowTitle] = useState(false);
@@ -56,10 +49,6 @@ function App() {
     window.addEventListener('scroll', handleScrollTitle, false);
     window.addEventListener('scroll', handleScrollArrow, false);
   }, [lastYPos]);
-
-  const onHover = (key) => {
-    setHover(key);
-  };
 
   const openLink = (url) => {
     const newWindow = window.open(url, '_blank', 'noopener,noreferrer');
@@ -157,23 +146,7 @@ function App() {
         </div>
       </motion.div>
 
-      <div className="top">
-        <div className="name">TRAVIS J HUSS</div>
-        <div className="job-title">Full Stack Software Engineer</div>
-        <img
-          src="./mill-city-museum.png"
-          // width="530"
-          alt="mill city museum in black and white"
-          className="cover-photo"
-        />
-        {mobile && (
-          <div className="scroll-text-mobile">
-            <p className="scroll-word">Scroll</p>
-            <p className="scroll-word">For</p>
-            <p className="scroll-word">More</p>
-          </div>
-        )}
-      </div>
+      <Top mobile={mobile}/>
 
       <div className="container" id="about">
         <div className="content">
@@ -221,118 +194,7 @@ function App() {
             {mobile ? (
               <WorkMobile openLink={openLink} />
             ) : (
-              <>
-                <Grid item xs={6}>
-                  {hover === 0 && <Details />}
-                  {hover === 1 && <Bekome />}
-                  {hover === 2 && <Movie />}
-                  {hover === 3 && <Chef />}
-                  {hover === 4 && <Gallery />}
-                  {hover === 5 && <Todo />}
-                </Grid>
-                <Grid item xs={6}>
-                  {/* <p className="subtitle"> Work </p> */}
-                  <center>
-                    <GridList
-                      cellHeight={75}
-                      className={classes.gridList}
-                      cols={6}
-                      rows={6}
-                    >
-                      <GridListTile
-                        key="1"
-                        cols={4}
-                        rows={2}
-                        onMouseEnter={() => onHover(1)}
-                        onMouseLeave={() => onHover(0)}
-                        onClick={() =>
-                          openLink(
-                            'https://github.com/travisjhuss/bekome-prime-group-project'
-                          )
-                        }
-                      >
-                        <img
-                          src="./explore-view2.png"
-                          alt="screen cap from bekome app"
-                          className="work-img"
-                        />
-                      </GridListTile>
-                      <GridListTile
-                        key="2"
-                        cols={2}
-                        rows={2}
-                        onMouseEnter={() => onHover(2)}
-                        onMouseLeave={() => onHover(0)}
-                        onClick={() =>
-                          openLink(
-                            'https://github.com/travisjhuss/movie-collection'
-                          )
-                        }
-                      >
-                        <img
-                          src="./movie-screen-2.png"
-                          alt="screen cap from movie database app"
-                          className="work-img"
-                        />
-                      </GridListTile>
-                      <GridListTile
-                        key="3"
-                        cols={6}
-                        rows={2}
-                        onMouseEnter={() => onHover(3)}
-                        onMouseLeave={() => onHover(0)}
-                        onClick={() =>
-                          openLink(
-                            'https://github.com/travisjhuss/the-condescending-chef'
-                          )
-                        }
-                      >
-                        <img
-                          src="./chef-screen2.png"
-                          alt="screen cap from condescending chef app"
-                          className="work-img"
-                        />
-                      </GridListTile>
-                      <GridListTile
-                        key="4"
-                        cols={2}
-                        rows={2}
-                        onMouseEnter={() => onHover(4)}
-                        onMouseLeave={() => onHover(0)}
-                        onClick={() =>
-                          openLink(
-                            'https://github.com/travisjhuss/photo-gallery-with-react'
-                          )
-                        }
-                      >
-                        <img
-                          src="./gallery-screen.png"
-                          alt="screen cap from photo gallery app"
-                          className="work-img"
-                        />
-                      </GridListTile>
-                      <GridListTile
-                        key="5"
-                        cols={4}
-                        rows={2}
-                        onMouseEnter={() => onHover(5)}
-                        onMouseLeave={() => onHover(0)}
-                        onClick={() =>
-                          openLink(
-                            'https://github.com/travisjhuss/to-do-list-app'
-                          )
-                        }
-                      >
-                        <img
-                          src="./to-do-screen.png"
-                          alt="screen cap from to do list app"
-                          className="work-img"
-                        />
-                      </GridListTile>
-                    </GridList>
-                  </center>
-                </Grid>{' '}
-              </>
+              <WorkDesktop openLink={openLink} />
             )}
           </Grid>
         </div>
