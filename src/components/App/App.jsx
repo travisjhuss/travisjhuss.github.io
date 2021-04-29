@@ -94,9 +94,8 @@ function App() {
             </Link>
           </motion.div>
         </div>
-        
-        <HeaderLinks/>
-        
+
+        <HeaderLinks />
       </div>
 
       <motion.div
@@ -105,7 +104,7 @@ function App() {
         animate={{ opacity: !shouldHideArrow ? 1 : 0 }}
         transition={{ opacity: { duration: 0.3 } }}
       >
-        <NavArrow/>
+        <NavArrow />
       </motion.div>
 
       <Top mobile={mobile} />
