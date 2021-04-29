@@ -1,12 +1,14 @@
 import { useState, useEffect } from 'react';
 // MUI
-import ArrowRightAltIcon from '@material-ui/icons/ArrowRightAlt';
 import { Grid, useMediaQuery } from '@material-ui/core';
 // Component Imports
 import WorkMobile from '../Work/WorkMobile';
 import WorkDesktop from '../Work/WorkDesktop';
 import Contact from '../Contact/Contact';
 import Top from '../Top/Top';
+import About from '../About/About';
+import NavArrow from '../NavArrow/NavArrow';
+import HeaderLinks from '../HeaderLinks/HeaderLinks';
 // Animation
 import { motion } from 'framer-motion';
 import { Link } from 'react-scroll';
@@ -92,38 +94,9 @@ function App() {
             </Link>
           </motion.div>
         </div>
-        <div className="header-nav">
-          <Link
-            className="link"
-            activeClass="active"
-            to="about"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            About
-          </Link>
-          <Link
-            className="link"
-            activeClass="active"
-            to="work"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Work
-          </Link>
-          <Link
-            className="link"
-            activeClass="active"
-            to="contact"
-            spy={true}
-            smooth={true}
-            duration={500}
-          >
-            Contact
-          </Link>
-        </div>
+        
+        <HeaderLinks/>
+        
       </div>
 
       <motion.div
@@ -132,56 +105,13 @@ function App() {
         animate={{ opacity: !shouldHideArrow ? 1 : 0 }}
         transition={{ opacity: { duration: 0.3 } }}
       >
-        <ArrowRightAltIcon
-          style={{
-            fontSize: '60px',
-            color: '#33312F',
-            transform: 'rotate(90deg)',
-          }}
-        />
-        <div className="scroll-text">
-          <p className="scroll-word">Scroll</p>
-          <p className="scroll-word">For</p>
-          <p className="scroll-word">More</p>
-        </div>
+        <NavArrow/>
       </motion.div>
 
-      <Top mobile={mobile}/>
+      <Top mobile={mobile} />
 
       <div className="container" id="about">
-        <div className="content">
-          <Grid container spacing={2}>
-            <Grid item sm={3} xs={6}>
-              <img
-                className="profile-img"
-                src="./Profile-pic-close.png"
-                alt="head shot of Travis Huss"
-              />
-            </Grid>
-            <Grid item sm={4} xs={6}>
-              <p className="subtitle">About</p>
-            </Grid>
-            <Grid item sm={5} xs={12}>
-              <p className="body-text about-text">
-                Accomplished leader in the hospitality industry now bringing the
-                skills cultivated over the past 15 years to a career in software
-                engineering. Strong organizational and communication skills, the
-                ability to multitask, and demonstrated success in building
-                positive working relationships at all levels. The best products
-                are created by those with passion for the work they do.
-              </p>
-            </Grid>
-            <Grid item xs={12}>
-              <p className="subtitle skills-header">Skills</p>
-              <p className="body-text" style={{ textAlign: 'center' }}>
-                JavaScript | CSS | React | Redux | Express | Node
-              </p>
-              <p className="body-text" style={{ textAlign: 'center' }}>
-                Python | Flask | Postgresql | JQuery | Bootstrap
-              </p>
-            </Grid>
-          </Grid>
-        </div>
+        <About />
       </div>
 
       <div className="container" id="work" data-aos="fade-up">
@@ -201,7 +131,7 @@ function App() {
       </div>
 
       <div className="container2" id="contact" data-aos="fade-right">
-        <Contact openLink={openLink}/>
+        <Contact openLink={openLink} />
       </div>
     </div>
   );
