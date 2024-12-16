@@ -7,7 +7,7 @@ export default function About() {
             <Grid item sm={3} xs={6}>
               <img
                 className="profile-img"
-                src="./Profile-pic-close.png"
+                src="./newProfilePic.jpg"
                 alt="head shot of Travis Huss"
               />
             </Grid>
