@@ -42,7 +42,7 @@ export default function Contact ({openLink}) {
             </Grid>
             <Grid item xs={5}></Grid>
             <Grid item xs={7} className={classes.contactLinks}>
-              <div className="link" onClick={() => openLink('/Resume2021.pdf')}>
+              <div className="link" onClick={() => openLink('/TravisHussResume24.pdf')}>
                 <img
                   alt="resume icon"
                   src="./resume.png"
