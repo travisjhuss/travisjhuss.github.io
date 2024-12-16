@@ -16,21 +16,23 @@ export default function About() {
             </Grid>
             <Grid item sm={5} xs={12}>
               <p className="body-text about-text">
-                Accomplished leader in the hospitality industry now bringing the
-                skills cultivated over the past 15 years to a career in software
-                engineering. Strong organizational and communication skills, the
-                ability to multitask, and demonstrated success in building
-                positive working relationships at all levels. The best products
-                are created by those with passion for the work they do.
+                Accomplished leader with 15 years of experience in hospitality, 
+                now thriving in software engineering. I bring a unique blend of 
+                strong organizational, communication, and multitasking skills, 
+                honed through years of leading teams and delivering high-quality results. 
+                As a software developer, I approach challenges with curiosity, tenacity, 
+                and a methodical, team-first mindset. My background as a chef and leader 
+                has taught me the value of collaboration, discipline, and passion in achieving 
+                the best outcomes—whether in the kitchen or in code.
               </p>
             </Grid>
             <Grid item xs={12}>
               <p className="subtitle skills-header">Skills</p>
               <p className="body-text" style={{ textAlign: 'center' }}>
-                JavaScript | CSS | React | Redux | Express | Node
+                JavaScript | C# .NET | React | Redux | CSS | Node
               </p>
               <p className="body-text" style={{ textAlign: 'center' }}>
-                Python | Flask | Postgresql | JQuery | Bootstrap
+                Python | Scala | PostgreSQL | Playwright/Jest | Bootstrap
               </p>
             </Grid>
           </Grid>
