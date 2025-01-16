@@ -29,10 +29,10 @@ export default function About() {
             <Grid item xs={12}>
               <p className="subtitle skills-header">Skills</p>
               <p className="body-text" style={{ textAlign: 'center' }}>
-                JavaScript | C# .NET | React | Redux | CSS | Node
+                TypeScript | C# .NET | React | Redux | CSS | Node
               </p>
               <p className="body-text" style={{ textAlign: 'center' }}>
-                Python | Scala | PostgreSQL | Playwright/Jest | Bootstrap
+                Python | Scala | PostgreSQL | Playwright/Jest | Component Libraries
               </p>
             </Grid>
           </Grid>
