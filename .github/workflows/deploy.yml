@@ -13,9 +13,9 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
+      - run: npm install -g next-cli
       - run: npm run build --if-present
-      - run: npm install -g @vercel/static-export
-      - run: static export --output ./out
+      - run: next export
       - uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
