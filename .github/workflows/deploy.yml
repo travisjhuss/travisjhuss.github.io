@@ -13,7 +13,8 @@ jobs:
         with:
           node-version: '20'
       - run: npm ci
-      - run: npm install -g next-cli
+      - name: Install Next.js CLI
+        run: npm install -g next-cli
       - run: npm run build --if-present
       - run: next export
       - uses: peaceiris/actions-gh-pages@v3
