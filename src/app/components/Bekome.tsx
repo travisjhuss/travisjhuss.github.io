@@ -14,7 +14,7 @@ const Bekome: React.FC<BekomeProps> = ({ isDesktop }) => {
                     height: isDesktop ? 550 : 200,
                 }}
                 image="/explore-view.png"
-                title="chef app screenshot"
+                title="bekome app screenshot"
                 component="img"
             />
             <CardContent>

@@ -14,7 +14,7 @@ const MovieApp: React.FC<MovieAppProps> = ({ isDesktop }) => {
                     height: isDesktop ? 600 : 225,
                 }}
                 image="/movie-screen-2.png"
-                title="chef app screenshot"
+                title="movie app screenshot"
                 component="img"
             />
             <CardContent>
