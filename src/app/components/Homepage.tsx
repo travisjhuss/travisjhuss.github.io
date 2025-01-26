@@ -17,7 +17,7 @@ export default function Home() {
         >
             <Box sx={{ mr: isDesktop ? 4 : 0 }}>
                 <Image
-                    src="/profilepic.jpg"
+                    src="/profilepic2.png"
                     alt="photo of Travis Huss"
                     width={isDesktop ? 350 : 325}
                     height={300}
