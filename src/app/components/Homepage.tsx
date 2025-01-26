@@ -1,5 +1,4 @@
 'use client';
-import Image from "next/image";
 import { Box, Button, Typography, useMediaQuery } from '@mui/material';
 
 export default function Home() {
@@ -16,7 +15,7 @@ export default function Home() {
             }}
         >
             <Box sx={{ mr: isDesktop ? 4 : 0 }}>
-                <Image
+                <img
                     src="/profilepic2.png"
                     alt="photo of Travis Huss"
                     width={isDesktop ? 350 : 325}

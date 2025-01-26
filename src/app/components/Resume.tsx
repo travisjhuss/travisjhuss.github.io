@@ -1,7 +1,6 @@
 'use client';
 import CircleIcon from '@mui/icons-material/Circle';
 import { Box, List, ListItem, ListItemIcon, Typography, useMediaQuery } from '@mui/material';
-import Image from 'next/image';
 
 export default function Home() {
     const isDesktop = useMediaQuery('(min-width:700px)');
@@ -205,7 +204,7 @@ export default function Home() {
                     justifyContent: 'center',
                     alignContent: 'center',
                 }}>
-                    <Image
+                    <img
                         src="/hireme.jpg"
                         alt="photo of Travis Huss"
                         width={isDesktop ? 250 : 225}
