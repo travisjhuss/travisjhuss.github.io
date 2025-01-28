@@ -118,7 +118,7 @@ export default function Home() {
                             <CircleIcon sx={{ fontSize: '12px'}}/>
                         </ListItemIcon>
                         <Typography variant="body1" align="left" component="p">
-                            Created fully accessible and responsive datepicker with React for in house component library with Storybook to be used across multiple apps.
+                            Created fully accessible and responsive datepicker with React for in house component library with Storybook to be consumed by in house teams for Rocket Travel and Agoda.
                         </Typography>
                     </ListItem>
                     <ListItem>
@@ -126,7 +126,7 @@ export default function Home() {
                             <CircleIcon sx={{ fontSize: '12px'}}/>
                         </ListItemIcon>
                         <Typography variant="body1" align="left" component="p">
-                            Contributed work and code reviews to over 20 repos spread across FE & BE and multiple languages.
+                            Contributed work and code reviews to over 20 repos spread across FE & BE in React, C#, and Scala.
                         </Typography>
                     </ListItem>
                     <ListItem>
@@ -187,7 +187,7 @@ export default function Home() {
                         align="left"
                         component="h4"
                     >
-                        Soft Skills
+                        Additional Skills
                     </Typography>
                 </Box>
                 <Typography variant="body1" align="left" component="p" sx={{ maxWidth: '800px', mt: '25px' }}>
