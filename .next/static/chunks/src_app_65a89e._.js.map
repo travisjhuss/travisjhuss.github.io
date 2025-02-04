@@ -1,9 +1,0 @@
-{
-  "version": 3,
-  "sources": [],
-  "sections": [
-    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/travishuss/Projects/travisjhuss.github.io/src/app/theme.ts"],"sourcesContent":["'use client';\nimport { blue, red, yellow } from '@mui/material/colors';\nimport { createTheme } from '@mui/material/styles';\n\nconst theme = createTheme({\n    palette: {\n        primary: {\n          main: blue['A700'],\n        },\n        secondary: {\n            main: yellow[700],\n        },\n        success: {\n            main: red['A700'],\n        },\n    },\n    typography: {\n        fontFamily: 'Raleway, Arial'\n      },\n});\n\nexport default theme;"],"names":[],"mappings":";;;AAEA;AADA;AAAA;AAAA;AADA;;;AAIA,MAAM,QAAQ,CAAA,GAAA,2aAAA,CAAA,cAAW,AAAD,EAAE;IACtB,SAAS;QACL,SAAS;YACP,MAAM,6YAAA,CAAA,OAAI,CAAC,OAAO;QACpB;QACA,WAAW;YACP,MAAM,iZAAA,CAAA,SAAM,CAAC,IAAI;QACrB;QACA,SAAS;YACL,MAAM,2YAAA,CAAA,MAAG,CAAC,OAAO;QACrB;IACJ;IACA,YAAY;QACR,YAAY;IACd;AACN;uCAEe"}},
-    {"offset": {"line": 37, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
-    {"offset": {"line": 43, "column": 0}, "map": {"version":3,"sources":["file:///Users/travishuss/Projects/travisjhuss.github.io/src/app/components/LazyLoaders.tsx"],"sourcesContent":["'use client';\nimport dynamic from 'next/dynamic'\n \n// Client Components:\nexport const NavBar = dynamic(() => import('./NavBar'), { ssr: true })\n"],"names":[],"mappings":";;;AACA;AADA;;AAIO,MAAM,SAAS,CAAA,GAAA,iSAAA,CAAA,UAAO,AAAD,OAAE;;;;;;IAA4B,KAAK"}},
-    {"offset": {"line": 64, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
-}
