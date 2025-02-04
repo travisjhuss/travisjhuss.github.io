@@ -1,30 +1,17 @@
-'use client';
 import CircleIcon from '@mui/icons-material/Circle';
-import { Box, List, ListItem, ListItemIcon, Typography, useMediaQuery } from '@mui/material';
+import { Box, List, ListItem, ListItemIcon, Typography } from '@mui/material';
 
 export default function Home() {
-    const isDesktop = useMediaQuery('(min-width:700px)');
 
     return (
-        <Box sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: isDesktop ? 'row' : 'column',
-                alignItems: 'center',
-                margin: isDesktop ? '75px auto' : '0',
-                p: isDesktop ? '0 20px' : 0
-            }}
-        >
-            <Box sx={{ p: isDesktop ? 0 : '0 20px',  maxWidth: '800px' }}>
-                <Box sx={{ 
-                    borderBottom: '1px solid black',
-                    mt: isDesktop ? 0 : 2
-                    }}
-                >
+        <Box className="flex flex-col justify-center items-center p-0 mx-auto my-[25px] md:flex-row md:my-[75px] md:px-[20px]">
+            <Box className="px-[20px] max-w-4xl md:p-0">
+                <Box className="border-b border-solid border-black mt-[16px] md:m-0">
                     <Typography
-                        variant={isDesktop ? 'h4' : 'h5'}
+                        variant="h5"
                         align="left"
-                        component="h4"
+                        component="h5"
+                        fontWeight={600}
                     >
                         Resume
                     </Typography>
@@ -36,15 +23,12 @@ export default function Home() {
                     collaboration and problem-solving in fast-paced environments. Proficient in Typescript, React, C#, and 
                     design systems, with a passion for translating user needs into effective and scalable solutions.
                 </Typography>
-                <Box sx={{ 
-                    borderBottom: '1px solid black',
-                    mt: 3
-                    }}
-                >
+                <Box className="border-b border-solid border-black mt-[16px]">
                     <Typography
-                        variant={isDesktop ? 'h5' : 'h6'}
+                        variant="h6"
                         align="right"
-                        component="h4"
+                        component="h6"
+                        fontWeight={600}
                     >
                         Skills, Language, Frameworks
                     </Typography>
@@ -53,15 +37,12 @@ export default function Home() {
                     React | Typescript | Next.js | C# | .Net | Javascript | Python | Scala | CSS | Node | Express | SQL | 
                     Gitlab/Github | CI/CD | Docker | Redux | Jest | Enzyme | Playwright | Cypress | Storybook | Grafana | HTML5
                 </Typography>
-                <Box sx={{ 
-                    borderBottom: '1px solid black',
-                    mt: 3
-                    }}
-                >
+                <Box className="border-b border-solid border-black mt-[16px]">
                     <Typography
-                        variant={isDesktop ? 'h5' : 'h6'}
+                        variant="h6"
                         align="left"
-                        component="h5"
+                        component="h6"
+                        fontWeight={600}
                     >
                         Experience
                     </Typography>
@@ -146,15 +127,12 @@ export default function Home() {
                         </Typography>
                     </ListItem>
                 </List>
-                <Box sx={{ 
-                    borderBottom: '1px solid black',
-                    mt: 3
-                    }}
-                >
+                <Box className="border-b border-solid border-black mt-[16px]">
                     <Typography
-                        variant={isDesktop ? 'h5' : 'h6'}
+                        variant="h6"
                         align="right"
-                        component="h4"
+                        component="h6"
+                        fontWeight={600}
                     >
                         Education
                     </Typography>
@@ -177,15 +155,12 @@ export default function Home() {
                 <Typography variant="body1" align="left" component="p" sx={{ mt: 1 }}>
                     Major in Film and Video Production. Minor in Film Studies (English). Digital Video Production Club
                 </Typography>
-                <Box sx={{ 
-                    borderBottom: '1px solid black',
-                    mt: 3
-                    }}
-                >
+                <Box className="border-b border-solid border-black mt-[16px]">
                     <Typography
-                        variant={isDesktop ? 'h5' : 'h6'}
+                        variant="h6"
                         align="left"
-                        component="h4"
+                        component="h6"
+                        fontWeight={600}
                     >
                         Additional Skills
                     </Typography>
@@ -196,23 +171,11 @@ export default function Home() {
                     Accessibility | Front-end analytics | End to end testing | AI | Machine learning |
                     Collaborative Leadership | AGILE practices | Problem solving | Distributed teamwork
                 </Typography>
-                <Box sx={{
-                    display: 'flex',
-                    mt: 3,
-                    mb: 1,
-                    width: '100%',
-                    justifyContent: 'center',
-                    alignContent: 'center',
-                }}>
+                <Box className="flex justify-center align-center mt-[24px] mb-[8px] w-full">
                     <img
                         src="/hireme.jpg"
                         alt="photo of Travis Huss"
-                        width={isDesktop ? 250 : 225}
-                        height={300}
-                        style={{ 
-                            borderRadius: '10px',
-                            border: '1px solid black'
-                        }}
+                        className="w-[225px] rounded-lg border border-solid border-black md:w-[250px]"
                     />
                 </Box>
             </Box>

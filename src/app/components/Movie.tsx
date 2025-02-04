@@ -1,18 +1,12 @@
-'use client';
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 
-type MovieAppProps = {
-    isDesktop: boolean;
-};
 
-const MovieApp: React.FC<MovieAppProps> = ({ isDesktop }) => {
+const MovieApp: React.FC = () => {
     return (
-        <Card sx={{ maxWidth: 1000, borderRadius: isDesktop ? '4px' : '0px', backgroundColor: '#fff' }}>
+        <Card className="md:rounded-sm" sx={{ maxWidth: 1000, backgroundColor: '#fff' }}>
             <CardMedia
-                sx={{
-                    height: isDesktop ? 600 : 225,
-                }}
+                className="h-[225px] md:h-[600px]"
                 image="/movie-screen-2.png"
                 title="movie app screenshot"
                 component="img"

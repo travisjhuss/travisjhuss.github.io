@@ -1,4 +1,4 @@
-import { Contact } from '../components/LazyLoaders';
+import Contact from "../components/Contact";
 
 export default function Home() {
 

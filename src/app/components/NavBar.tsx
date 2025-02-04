@@ -50,18 +50,8 @@ const NavBar: React.FC = () => {
     return (
         <AppBar position="static" color="transparent" sx={{ boxShadow: 0 }}>
             <Toolbar disableGutters={true} sx={{ justifyContent: 'center' }}>
-                <Box sx={{ 
-                    display: 'flex',
-                    justifyContent: 'space-between',
-                    alignItems: 'center',
-                    width: '100%',
-                    maxWidth: '1100px',
-                }}>
-                    <Box sx={{ 
-                        display: 'flex',
-                        justifyContent: 'flex-start',
-                        alignItems: 'center',
-                    }}>
+                <Box className="flex justify-between items-center max-w-6xl w-full">
+                    <Box className="flex justify-start items-center">
                         <IconButton
                             href="/"
                             size="large"
@@ -74,34 +64,19 @@ const NavBar: React.FC = () => {
                         >
                             <CircleIcon fontSize="large" sx={{ color: yellow[700] }}/>
                         </IconButton>
-                        <Typography 
-                            variant={isDesktop ? 'h6' : 'body1'}
-                            align="left"
-                            component="div"
-                            sx={{ 
-                                flexGrow: 1,
-                                ml: 1,
-                                fontWeight: 600,
-                            }}
+                        <h1 
+                            className="font-bold pl-[8px] text-left text-base md:text-xl"
                         >
                             Travis J. Huss
-                        </Typography>
-                        <Typography
-                            variant={isDesktop ? 'h6' : 'body2'}
-                            align="left"
-                            component="div"
-                            sx={{ flexGrow: 1, ml: 1 }}
+                        </h1>
+                        <h2
+                            className="text-left pl-[8px] text-base md:text-xl"
                         >
                             Software Engineer
-                        </Typography>
+                        </h2>
                     </Box>
                     {isDesktop ?
-                            <Box sx={{ 
-                                display: 'flex',
-                                justifyContent: 'flex-start',
-                                alignItems: 'center',
-                                pr: '12px'
-                            }}>
+                            <Box className="flex justify-start align-center pe-[12px]">
                                 <ButtonGroup variant="text" color="inherit" aria-label="Basic button group">
                                     <ResumeButton variant="text" href="/resume">Resume</ResumeButton>
                                     <ProjectButton variant="text" href="/projects">Projects</ProjectButton>
@@ -131,12 +106,7 @@ const NavBar: React.FC = () => {
                                     },
                                 }}
                             >
-                                <Box sx={{ 
-                                    display: 'flex',
-                                    justifyContent: 'flex-end',
-                                    alignItems: 'center',
-                                    mt: 1
-                                }}>
+                                <Box className="flex justify-end align-center mt-1">
                                     <IconButton
                                         onClick={() => toggleDrawer()}
                                         size="large"

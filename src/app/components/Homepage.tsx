@@ -1,41 +1,25 @@
-'use client';
-import { Box, Button, Typography, useMediaQuery } from '@mui/material';
+import { Box, Button, Typography } from '@mui/material';
 
 export default function Home() {
-    const isDesktop = useMediaQuery('(min-width:700px)');
-
     return (
-        <Box sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: isDesktop ? 'row' : 'column',
-                alignItems: 'center',
-                margin: isDesktop ? '120px auto' : '0',
-                p: isDesktop ? '0 20px' : 0
-            }}
+        <Box 
+            className="flex justify-center items-center flex-col m-0 p-0 md:my-[120px] md:mx-auto md:flex-row md:px-5"
         >
-            <Box sx={{ mr: isDesktop ? 4 : 0 }}>
+            <Box className="w-[325px] md:w-[350px] md:w-sm m-0 md:me-[32px]">
                 <img
                     src="/profilepic2.png"
                     alt="photo of Travis Huss"
-                    width={isDesktop ? 350 : 325}
-                    height={300}
-                    style={{ 
-                        borderRadius: isDesktop ? '10px' : '0',
-                        border: '1px solid black'
-                    }}
+                    className="w-fit md:rounded-lg md:border md:border-solid md:border-black"
                 />
             </Box>
-            <Box sx={{ p: isDesktop ? 0 : '0 20px'}}>
-                <Box sx={{ 
-                    borderBottom: '1px solid black',
-                    mt: isDesktop ? 0 : 2
-                    }}
+            <Box className="px-[20px] md:p-0">
+                <Box className="border-b border-solid border-black mt-[20px] md:mt-0"
                 >
                     <Typography
-                        variant={isDesktop ? 'h4' : 'h5'}
-                        align={isDesktop? 'left' : 'center'}
-                        component="h4"
+                        className="text-center w-full md:text-left"
+                        variant="h5"
+                        component="h5"
+                        fontWeight={600}
                     >
                         Greetings & salutations...
                     </Typography>
@@ -46,17 +30,7 @@ export default function Home() {
                     Dive in, let the lines of code speak, and if you feel the pull, reach out. 
                     The door is always open.
                 </Typography>
-                <Box 
-                    sx={{
-                        mt: isDesktop ? 5 : 3,
-                        display: 'flex',
-                        flexDirection: 'row',
-                        flexWrap: 'wrap',
-                        justifyContent: 'space-around',
-                        alignItems: 'center',
-                        mb: isDesktop ? 0 : 2
-                    }}
-                >
+                <Box className="flex flex-row flex-wrap justify-around items-center mt-[20px] mb-[20px] md:mt-[40px] md:mb-0">
                     <Button
                         variant="contained"
                         color="success"

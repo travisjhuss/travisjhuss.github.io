@@ -1,38 +1,22 @@
-'use client';
-import { Box, Typography, useMediaQuery } from '@mui/material';
+import { Box, Typography } from '@mui/material';
 import ChefApp from './ChefApp';
 import Bekome from './Bekome';
 import MovieApp from './Movie';
 
 export default function Home() {
-    const isDesktop = useMediaQuery('(min-width:700px)');
-
     return (
-        <Box sx={{
-            display: 'flex',
-            justifyContent: 'center',
-            alignContent: 'center',
-            flexDirection: 'column',
-            margin: isDesktop ? '25px auto' : '0',
-            p: isDesktop ? '0 20px' : 0,
-            flexWrap: "wrap"
-        }}
-        >
+        <Box className="flex justify-center content-center flex-col flex-wrap md:my-[25px] md:mx-auto md:px-[20px]">
             <Typography
                 variant="caption"
                 align='right'
-                sx={{
-                    mb: 1,
-                    mr: isDesktop ? 1 : 2,
-                }}
-            >
+                className="pe-[16px] pb-[8px] md:pe-[8px]">
                 Scroll for more
             </Typography>
-            <Bekome isDesktop={isDesktop} />
+            <Bekome />
             <Box sx={{ mt: 3 }} />
-            <ChefApp isDesktop={isDesktop} />
+            <ChefApp />
             <Box sx={{ mt: 3 }} />
-            <MovieApp isDesktop={isDesktop} />
+            <MovieApp />
         </Box>
     )
 };

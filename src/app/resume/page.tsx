@@ -1,4 +1,4 @@
-import { Resume } from '../components/LazyLoaders';
+import Resume from "../components/Resume";
 
 export default function Home() {
 

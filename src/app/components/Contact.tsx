@@ -1,23 +1,13 @@
-'use client';
-import { Box, List, ListItem, ListItemButton, ListItemIcon, Typography, useMediaQuery } from '@mui/material';
+import { Box, List, ListItem, ListItemButton, ListItemIcon, Typography } from '@mui/material';
 import EmailIcon from '@mui/icons-material/Email';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 
 export default function Home() {
-    const isDesktop = useMediaQuery('(min-width:700px)');
 
     return (
-        <Box sx={{
-                display: 'flex',
-                justifyContent: 'center',
-                flexDirection: 'column',
-                alignItems: 'center',
-                margin: isDesktop ? '75px auto' : '25px auto',
-                p: isDesktop ? '0 20px' : 0
-            }}
-        >
-            <Typography variant={isDesktop ? 'h4' : 'h5'} align="left" component="h4">
+        <Box className="flex flex-col justify-center items-center p-0 mx-auto my-[25px] md:my-[75px] md:px-[20px]">
+            <Typography variant="h5" align="left" component="h5" fontWeight={600}>
                 Contact
             </Typography>
             <List sx={{ mt: 8 }}>

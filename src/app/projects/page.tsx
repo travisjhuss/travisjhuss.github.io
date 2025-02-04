@@ -1,4 +1,4 @@
-import { Projects } from "../components/LazyLoaders";
+import Projects from "../components/Projects";
 
 export default function Home() {
 

@@ -1,18 +1,12 @@
-'use client';
 import { Button, Card, CardActions, CardContent, CardMedia, Typography } from '@mui/material';
 import React from 'react';
 
-type BekomeProps = {
-    isDesktop: boolean;
-};
 
-const Bekome: React.FC<BekomeProps> = ({ isDesktop }) => {
+const Bekome: React.FC = () => {
     return (
-        <Card sx={{ maxWidth: 1000, borderRadius: isDesktop ? '4px' : '0px', backgroundColor: '#fff' }}>
+        <Card className="md:rounded-sm" sx={{ maxWidth: 1000, backgroundColor: '#fff' }}>
             <CardMedia
-                sx={{
-                    height: isDesktop ? 550 : 200,
-                }}
+                className="h-[225px] md:h-[600px]"
                 image="/explore-view.png"
                 title="bekome app screenshot"
                 component="img"
