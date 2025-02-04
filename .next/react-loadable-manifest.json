@@ -1,12 +1,18 @@
 {
   "app/components/LazyLoaders.tsx -> ./NavBar": {
-    "id": 7721,
+    "id": 5818,
     "files": [
-      "static/chunks/815-4ac2ee39dcb45cd1.js",
-      "static/chunks/724-9dcee032b0357772.js",
-      "static/chunks/304-2ecc8b8406f610dd.js",
-      "static/chunks/244.f86f7fc10f8fbb39.js",
-      "static/chunks/721.4772e95661cdb472.js"
+      "static/chunks/466-5317b21e5dd3e14b.js",
+      "static/chunks/89-a1100cac8c42469c.js",
+      "static/chunks/818.794632fdc56d7fbd.js"
+    ]
+  },
+  "app/components/NavBar.tsx -> ./Menu": {
+    "id": 3526,
+    "files": [
+      "static/chunks/946-13b6bb901ebf778c.js",
+      "static/chunks/227.bc21942b2c750b00.js",
+      "static/chunks/526.80dc4361476bad9a.js"
     ]
   }
 }
