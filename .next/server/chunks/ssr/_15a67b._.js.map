@@ -1,0 +1,9 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 7, "column": 0}, "map": {"version":3,"sources":["file:///Users/travishuss/Projects/travisjhuss.github.io/src/app/thebluerose/page.tsx"],"sourcesContent":["import { Box } from \"@mui/material\";\nimport Spotlight from \"../components/Spotlight\";\nimport TextFadeInOut from \"../components/TextFade\";\n\nexport default function Home() {\n    const string = \". . .a person needs new experiences. They jar something deep inside, allowing him to grow. Without change something sleeps inside us, and seldom awakens. The sleeper must awaken.\";\n\n    return (\n        <Box className=\"max-w-4xl flex justify-center content-center flex-col flex-wrap md:my-[100px] md:mx-auto md:px-[20px]\">\n            {/* <Spotlight /> */}\n            {/* <TextFadeInOut text={string} delay={100} /> */}\n            <Box className=\"animate-pulse\">\n                <p>{string}</p>\n            </Box>\n        </Box>\n    )\n};\n"],"names":[],"mappings":";;;;AAAA;;;AAIe,SAAS;IACpB,MAAM,SAAS;IAEf,qBACI,6WAAC,qYAAA,CAAA,MAAG;QAAC,WAAU;kBAGX,cAAA,6WAAC,qYAAA,CAAA,MAAG;YAAC,WAAU;sBACX,cAAA,6WAAC;0BAAG;;;;;;;;;;;;;;;;AAIpB"}},
+    {"offset": {"line": 38, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}},
+    {"offset": {"line": 49, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":""}},
+    {"offset": {"line": 49, "column": 0}, "map": {"version":3,"sources":[],"names":[],"mappings":"A"}}]
+}
